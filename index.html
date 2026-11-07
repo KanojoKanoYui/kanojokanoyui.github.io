@@ -1,410 +1,51 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>彼女彼由衣 | Kanojo Ka no Yui</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-jp@5.0.8/index.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-jp@5.0.8/index.min.css">
-    <style>
-        :root {
-            --bg-cream: #FDFBF7;
-            --ink-blue: #1A2B4C;
-            --lavender: #B8A9C9;
-            --lavender-dark: #8E7B9E;
-            --text-main: #2C3E50;
-        }
-
-        body {
-            background-color: var(--bg-cream);
-            color: var(--ink-blue);
-            font-family: 'Noto Sans JP', sans-serif;
-            overflow-x: hidden;
-            position: relative;
-        }
-
-        /* 纸张颗粒纹理 */
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 50;
-            opacity: 0.4;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.5'/%3E%3C/svg%3E");
-        }
-
-        .font-serif-jp {
-            font-family: 'Noto Serif JP', serif;
-        }
-
-        /* 粗粝手绘边框效果 */
-        .sketch-border {
-            position: relative;
-            border: 2px solid var(--ink-blue);
-            border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
-            transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
-        }
-
-        .sketch-border:hover {
-            border-radius: 15px 225px 15px 255px / 255px 15px 225px 15px;
-            transform: scale(1.02);
-        }
-
-        /* 延迟反应动画类 */
-        .delayed-hover {
-            transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-        }
-
-        .delayed-hover:hover {
-            transform: translateY(-5px);
-            filter: drop-shadow(0 10px 15px rgba(26, 43, 76, 0.1));
-        }
-
-        /* 故障/抖动效果 */
-        @keyframes glitch-sketch {
-            0% { transform: translate(0, 0); }
-            20% { transform: translate(-1px, 1px); }
-            40% { transform: translate(1px, -1px); }
-            60% { transform: translate(-1px, -1px); }
-            80% { transform: translate(1px, 1px); }
-            100% { transform: translate(0, 0); }
-        }
-
-        .glitch-hover:hover svg {
-            animation: glitch-sketch 0.3s infinite;
-        }
-
-        /* 呼吸灯效果 */
-        @keyframes breathe {
-            0%, 100% { opacity: 0.8; }
-            50% { opacity: 1; }
-        }
-
-        .breathe {
-            animation: breathe 4s ease-in-out infinite;
-        }
-
-        /* 滚动显现动画 */
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 1s cubic-bezier(0.2, 0.8, 0.2, 1);
-        }
-
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* 自定义滚动条 */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: var(--bg-cream);
-        }
-        ::-webkit-scrollbar-thumb {
-            background: var(--lavender);
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--ink-blue);
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f0e8">
+  <meta name="description" content="彼女彼由衣——一份关于日常、身份与微小故障的角色档案。">
+  <title>彼女彼由衣 — 日常系谜题</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Noto+Serif+SC:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root{--paper:#f4f0e8;--paper-deep:#e9e2d5;--ink:#202844;--muted:#77766f;--lilac:#aaa0bd;--lilac-pale:#d8d0df;--red:#bb574b;--line:rgba(32,40,68,.22);--serif:'Noto Serif SC','Songti SC',serif;--mono:'DM Mono',monospace;--content:1160px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:88px}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);-webkit-font-smoothing:antialiased}body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:5;opacity:.13;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.24'/%3E%3C/svg%3E")}.wrap{width:min(var(--content),calc(100% - 56px));margin:auto}.mono,.eyebrow,.nav,.index,.caption,.stamp{font-family:var(--mono);letter-spacing:.12em;text-transform:uppercase}.topbar{height:74px;border-bottom:1px solid var(--line);display:flex;align-items:center;position:absolute;inset:0 0 auto;z-index:10}.nav{width:min(var(--content),calc(100% - 56px));margin:auto;display:flex;justify-content:space-between;align-items:center;font-size:10px}.brand{font-family:var(--serif);font-size:17px;font-weight:700;letter-spacing:.18em;text-decoration:none;color:var(--ink)}.navlinks{display:flex;gap:34px}.nav a{color:inherit;text-decoration:none;transition:color .2s}.nav a:hover,.nav a:focus-visible{color:var(--red)}.hero{min-height:760px;padding:132px 0 70px;display:grid;grid-template-columns:1fr .86fr;align-items:center;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;width:480px;height:480px;border:1px solid var(--line);border-radius:50%;right:5%;top:19%;box-shadow:0 0 0 32px rgba(170,160,189,.06),0 0 0 80px rgba(170,160,189,.04);z-index:-1}.hero-copy{position:relative;z-index:1;padding:30px 0}.eyebrow{font-size:10px;color:var(--red);display:flex;align-items:center;gap:12px}.eyebrow:before{content:"";width:30px;height:1px;background:var(--red)}h1{font-size:clamp(52px,8vw,102px);line-height:1.15;letter-spacing:.1em;margin:28px 0 9px;font-weight:600}.roman{font-family:var(--mono);font-size:12px;letter-spacing:.34em;color:var(--muted);margin:0 0 34px}.intro{font-size:16px;line-height:2;max-width:390px;color:#4f5361}.hero-actions{display:flex;align-items:center;gap:26px;margin-top:35px}.button{display:inline-flex;align-items:center;gap:18px;padding:13px 18px;border:1px solid var(--ink);text-decoration:none;color:var(--ink);font-size:12px;letter-spacing:.1em;transition:background .25s,color .25s}.button:hover{background:var(--ink);color:var(--paper)}.arrow{font-family:var(--mono)}.hero-note{font:10px var(--mono);letter-spacing:.1em;color:var(--muted)}.portrait{position:relative;max-width:510px;margin:auto}.portrait img{display:block;width:100%;height:auto;filter:drop-shadow(0 22px 35px rgba(32,40,68,.12))}.portrait-label{position:absolute;right:-8px;bottom:10%;writing-mode:vertical-rl;font:10px var(--mono);letter-spacing:.2em;color:var(--muted)}.portrait-index{position:absolute;left:1%;top:18%;font:10px var(--mono);color:var(--red);writing-mode:vertical-rl;letter-spacing:.18em}.scroll-mark{position:absolute;bottom:30px;left:50%;font:9px var(--mono);letter-spacing:.2em;color:var(--muted);display:flex;align-items:center;gap:12px}.scroll-mark:after{content:"";height:35px;width:1px;background:var(--red)}.section{padding:112px 0;border-top:1px solid var(--line)}.section-head{display:grid;grid-template-columns:150px 1fr;gap:20px;align-items:start;margin-bottom:58px}.index{font-size:10px;color:var(--red);padding-top:13px}.section-title{font-size:clamp(29px,4vw,47px);font-weight:500;letter-spacing:.08em;margin:0}.section-sub{font:10px var(--mono);color:var(--muted);letter-spacing:.17em;margin-top:13px}.concept-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;margin-left:170px}.concept-lead{font-size:21px;line-height:1.9;margin:0}.concept-copy{color:#62616a;font-size:14px;line-height:2.1;margin:0}.rule{width:42px;height:2px;background:var(--red);margin:28px 0}.cards{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.state-card{padding:28px 24px 32px;min-height:248px;border-right:1px solid var(--line);position:relative;transition:background .25s}.state-card:last-child{border:0}.state-card:hover{background:rgba(170,160,189,.12)}.state-card .number{font:10px var(--mono);color:var(--red)}.state-symbol{width:84px;height:84px;margin:20px 0 17px;color:var(--ink)}.state-card h3{font-size:16px;font-weight:500;letter-spacing:.08em;margin:0 0 10px}.state-card p{font-size:12px;line-height:1.9;color:var(--muted);margin:0}.state-card.glitch{background:rgba(187,87,75,.045)}.state-card.glitch .state-symbol{color:var(--red)}.quote-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}.quote{padding:38px 34px 30px;border:1px solid var(--line);position:relative;min-height:220px;background:rgba(255,255,255,.2)}.quote:before{content:"“";position:absolute;top:-23px;left:24px;background:var(--paper);padding:0 10px;color:var(--lilac);font-size:54px;line-height:1}.quote p{font-size:20px;line-height:1.9;letter-spacing:.05em;margin:0}.quote .caption{font-size:9px;color:var(--muted);margin-top:24px;line-height:1.8}.archive{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}.archive-item{background:var(--paper);padding:26px 30px;display:grid;grid-template-columns:100px 1fr;gap:20px}.archive-item dt{font:10px var(--mono);color:var(--red);letter-spacing:.1em}.archive-item dd{margin:0;font-size:13px;line-height:1.8}.footer{padding:48px 0 35px;background:var(--ink);color:var(--paper)}.footer-inner{display:flex;justify-content:space-between;align-items:end;gap:24px}.footer-name{font-size:22px;letter-spacing:.2em}.footer-note{font:9px var(--mono);letter-spacing:.12em;color:rgba(244,240,232,.55);margin-top:10px}.footer-mark{font:9px var(--mono);color:rgba(244,240,232,.5);text-align:right;line-height:1.9}.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:none}.reveal:nth-child(2){transition-delay:.12s}.reveal:nth-child(3){transition-delay:.2s}
+    @media(max-width:760px){.wrap,.nav{width:min(100% - 36px,var(--content))}.topbar{height:64px}.navlinks{gap:15px;font-size:9px}.brand{font-size:15px}.hero{padding:105px 0 74px;min-height:auto;grid-template-columns:1fr}.hero-copy{padding:30px 0 0}.hero:after{width:310px;height:310px;right:-20%;top:38%}.hero h1{font-size:clamp(48px,13vw,78px)}.portrait{width:min(100%,390px);margin:-8px auto 0}.portrait-index{left:-3%;top:20%}.portrait-label{right:-2%}.scroll-mark{display:none}.section{padding:78px 0}.section-head{grid-template-columns:1fr;gap:8px;margin-bottom:34px}.index{padding:0}.concept-grid{margin:0;grid-template-columns:1fr;gap:22px}.concept-lead{font-size:18px}.cards{grid-template-columns:1fr 1fr}.state-card{border-bottom:1px solid var(--line);min-height:220px;padding:22px 17px}.state-card:nth-child(2){border-right:0}.state-card:nth-child(3),.state-card:nth-child(4){border-bottom:0}.state-card:nth-child(3){border-right:1px solid var(--line)}.state-symbol{width:68px;height:68px;margin:15px 0}.quote-grid{grid-template-columns:1fr;gap:28px}.quote{min-height:0;padding:32px 24px 24px}.quote p{font-size:17px}.archive{grid-template-columns:1fr}.archive-item{padding:20px;grid-template-columns:86px 1fr}.footer-inner{align-items:flex-start;flex-direction:column}.footer-mark{text-align:left}}@media(max-width:380px){.navlinks{gap:9px}.navlinks a{font-size:8px}.hero-actions{gap:14px}.hero-note{font-size:8px}}@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+  </style>
 </head>
-<body class="antialiased selection:bg-[#B8A9C9] selection:text-[#1A2B4C]">
-
-    <!-- 导航栏 -->
-    <nav class="fixed top-0 w-full z-40 bg-[#FDFBF7]/90 backdrop-blur-sm border-b border-[#1A2B4C]/10">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="font-serif-jp text-xl tracking-widest font-bold text-[#1A2B4C]">
-                彼女彼由衣
-            </div>
-            <div class="hidden md:flex space-x-8 text-sm tracking-wider text-[#1A2B4C]/70">
-                <a href="#concept" class="hover:text-[#1A2B4C] transition-colors duration-500">概念</a>
-                <a href="#states" class="hover:text-[#1A2B4C] transition-colors duration-500">状态</a>
-                <a href="#voice" class="hover:text-[#1A2B4C] transition-colors duration-500">声音</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <header class="min-h-screen flex flex-col justify-center items-center relative px-6 pt-20">
-        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#B8A9C9]/10 rounded-full blur-3xl -z-10"></div>
-        
-        <!-- SVG 角色插图 -->
-        <div class="w-64 h-64 md:w-80 md:h-80 mb-8 relative group cursor-pointer">
-            <svg viewBox="0 0 400 400" class="w-full h-full drop-shadow-lg" style="filter: url(#rough);">
-                <defs>
-                    <filter id="rough">
-                        <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" result="noise" />
-                        <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G" />
-                    </filter>
-                    <radialGradient id="hairGrad" cx="50%" cy="50%" r="50%">
-                        <stop offset="0%" stop-color="#E2D9EC" />
-                        <stop offset="100%" stop-color="#B8A9C9" />
-                    </radialGradient>
-                </defs>
-                
-                <!-- 头发后层 -->
-                <path d="M 100 200 C 80 100, 150 50, 200 50 C 250 50, 320 100, 300 200 C 320 280, 280 320, 200 320 C 120 320, 80 280, 100 200 Z" fill="url(#hairGrad)" stroke="#1A2B4C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                
-                <!-- 脸部 -->
-                <ellipse cx="200" cy="210" rx="70" ry="80" fill="#FDFBF7" stroke="#1A2B4C" stroke-width="3"/>
-                
-                <!-- 头发前层/刘海 -->
-                <path d="M 130 180 C 140 120, 180 100, 200 100 C 220 100, 260 120, 270 180 C 250 150, 220 140, 200 140 C 180 140, 150 150, 130 180 Z" fill="url(#hairGrad)" stroke="#1A2B4C" stroke-width="2.5" stroke-linecap="round"/>
-                <path d="M 110 220 C 100 180, 120 140, 150 130" fill="none" stroke="#1A2B4C" stroke-width="2" stroke-linecap="round"/>
-                <path d="M 290 220 C 300 180, 280 140, 250 130" fill="none" stroke="#1A2B4C" stroke-width="2" stroke-linecap="round"/>
-                
-                <!-- 眼睛 -->
-                <ellipse cx="170" cy="210" rx="18" ry="24" fill="#1A2B4C" />
-                <ellipse cx="230" cy="210" rx="18" ry="24" fill="#1A2B4C" />
-                <!-- 眼睛高光 (极弱) -->
-                <circle cx="165" cy="200" r="3" fill="#FDFBF7" opacity="0.3"/>
-                <circle cx="225" cy="200" r="3" fill="#FDFBF7" opacity="0.3"/>
-                
-                <!-- 嘴巴 (微表情) -->
-                <path d="M 195 250 Q 200 252 205 250" fill="none" stroke="#1A2B4C" stroke-width="2" stroke-linecap="round"/>
-                
-                <!-- 衣服 -->
-                <path d="M 160 290 C 160 320, 140 380, 140 380 L 260 380 C 260 380, 240 320, 240 290 Z" fill="#FDFBF7" stroke="#1A2B4C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-        </div>
-
-        <h1 class="font-serif-jp text-5xl md:text-7xl font-bold tracking-[0.2em] text-[#1A2B4C] mb-4 text-center breathe">
-            彼女彼由衣
-        </h1>
-        <p class="font-serif-jp text-lg md:text-xl tracking-[0.5em] text-[#1A2B4C]/60 mb-8 text-center">
-            KANOJO KA NO YUI
-        </p>
-        <p class="max-w-md text-center text-[#1A2B4C]/80 leading-relaxed tracking-wide text-sm md:text-base">
-            被定义的少女，行走的日常系谜题。<br>
-            在治愈的框架内，试探着怪诞的边缘。
-        </p>
-        
-        <div class="absolute bottom-10 animate-bounce">
-            <svg class="w-6 h-6 text-[#1A2B4C]/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-            </svg>
-        </div>
+<body>
+  <nav class="topbar" aria-label="主导航"><div class="nav"><a class="brand" href="#top">彼女彼由衣</a><div class="navlinks"><a href="#concept">概念</a><a href="#states">状态</a><a href="#voice">独白</a><a href="#archive">档案</a></div></div></nav>
+  <main id="top">
+    <header class="hero wrap">
+      <div class="hero-copy">
+        <p class="eyebrow">A STUDY OF ORDINARY MYSTERY · 2026</p>
+        <h1>彼女彼<br>由衣</h1>
+        <p class="roman">KANOJO KA NO YUI</p>
+        <p class="intro">被定义的少女，行走的日常系谜题。<br>在治愈的框架内，试探着怪诞的边缘。</p>
+        <div class="hero-actions"><a class="button" href="#concept">翻阅角色档案 <span class="arrow">↘</span></a><span class="hero-note">FIG. 01 — THE SUBJECT</span></div>
+      </div>
+      <figure class="portrait"><span class="portrait-index">PLATE 01 / PORTRAIT</span><img src="assets/yui-portrait.svg" alt="由衣的手绘肖像：淡紫色长发、深蓝水手领与细小红色发饰" width="600" height="680"><figcaption class="portrait-label">NOT A COMPLETE PERSON / 由衣</figcaption></figure>
+      <div class="scroll-mark">SCROLL TO OBSERVE</div>
     </header>
-
-    <!-- Concept Section -->
-    <section id="concept" class="py-24 px-6 bg-[#FDFBF7]">
-        <div class="max-w-4xl mx-auto">
-            <div class="reveal mb-16">
-                <h2 class="font-serif-jp text-3xl md:text-4xl font-bold text-[#1A2B4C] mb-2 tracking-wider">概念 / CONCEPT</h2>
-                <div class="w-16 h-1 bg-[#B8A9C9] mb-6"></div>
-                <p class="text-[#1A2B4C]/70 text-lg leading-loose">
-                    “彼女彼”是重复的指代符号，“由衣”是被赋予的容器名。<br>
-                    她不是一个拥有完整社会关系的“人”，而是一个为了回应期待而存在的界面。
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-12">
-                <div class="reveal sketch-border p-8 bg-white/50 delayed-hover">
-                    <h3 class="font-serif-jp text-xl font-bold text-[#1A2B4C] mb-4">符号化客体</h3>
-                    <p class="text-[#1A2B4C]/70 leading-relaxed text-sm">
-                        名字的前半部分完全是代词性质的词汇，这意味着角色的“社会身份”被抹去了，只剩下一个纯粹的“性别/存在标签”。她像是从画稿线条中生长出来的、尚未完全适应人类语言逻辑的存在。
-                    </p>
-                </div>
-                <div class="reveal sketch-border p-8 bg-white/50 delayed-hover" style="transition-delay: 0.2s;">
-                    <h3 class="font-serif-jp text-xl font-bold text-[#1A2B4C] mb-4">日常异质化</h3>
-                    <p class="text-[#1A2B4C]/70 leading-relaxed text-sm">
-                        在安全的萌系外壳下，包裹着略显神经质、疏离的内核。这是一种在治愈系框架内试探边界的策略——看起来是可爱的女孩子，但名字里藏着一点“不对劲”的忧郁或神秘。
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- States Section -->
-    <section id="states" class="py-24 px-6 bg-[#F4F1EA]">
-        <div class="max-w-6xl mx-auto">
-            <div class="reveal mb-16 text-center">
-                <h2 class="font-serif-jp text-3xl md:text-4xl font-bold text-[#1A2B4C] mb-2 tracking-wider">状态 / STATES</h2>
-                <p class="text-[#1A2B4C]/60 text-sm tracking-widest">DYNAMIC MANIFESTATION</p>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- State 1: Idle -->
-                <div class="reveal glitch-hover group">
-                    <div class="sketch-border bg-[#FDFBF7] p-6 h-full flex flex-col items-center text-center delayed-hover">
-                        <div class="w-24 h-24 mb-6 relative">
-                            <svg viewBox="0 0 100 100" class="w-full h-full">
-                                <circle cx="50" cy="50" r="40" fill="#B8A9C9" opacity="0.3"/>
-                                <circle cx="35" cy="45" r="5" fill="#1A2B4C"/>
-                                <circle cx="65" cy="45" r="5" fill="#1A2B4C"/>
-                                <path d="M 45 60 Q 50 62 55 60" fill="none" stroke="#1A2B4C" stroke-width="1.5"/>
-                            </svg>
-                        </div>
-                        <h3 class="font-serif-jp text-lg font-bold text-[#1A2B4C] mb-2">待机 / IDLE</h3>
-                        <p class="text-xs text-[#1A2B4C]/60 leading-relaxed">
-                            标准微笑，眼神柔和但无特定焦点。展现“完美少女”的出厂设置。
-                        </p>
-                    </div>
-                </div>
-
-                <!-- State 2: Interaction -->
-                <div class="reveal glitch-hover group" style="transition-delay: 0.1s;">
-                    <div class="sketch-border bg-[#FDFBF7] p-6 h-full flex flex-col items-center text-center delayed-hover">
-                        <div class="w-24 h-24 mb-6 relative">
-                            <svg viewBox="0 0 100 100" class="w-full h-full">
-                                <circle cx="50" cy="50" r="40" fill="#B8A9C9" opacity="0.5"/>
-                                <circle cx="35" cy="45" r="6" fill="#1A2B4C"/>
-                                <circle cx="65" cy="45" r="6" fill="#1A2B4C"/>
-                                <circle cx="33" cy="43" r="1.5" fill="#FDFBF7"/>
-                                <circle cx="63" cy="43" r="1.5" fill="#FDFBF7"/>
-                                <path d="M 45 62 Q 50 65 55 62" fill="none" stroke="#1A2B4C" stroke-width="1.5"/>
-                            </svg>
-                        </div>
-                        <h3 class="font-serif-jp text-lg font-bold text-[#1A2B4C] mb-2">互动 / INTERACT</h3>
-                        <p class="text-xs text-[#1A2B4C]/60 leading-relaxed">
-                            笑容加深，眼神聚焦。亲密是表演，距离是本能。
-                        </p>
-                    </div>
-                </div>
-
-                <!-- State 3: Glitch -->
-                <div class="reveal glitch-hover group" style="transition-delay: 0.2s;">
-                    <div class="sketch-border bg-[#FDFBF7] p-6 h-full flex flex-col items-center text-center delayed-hover border-[#8E7B9E]">
-                        <div class="w-24 h-24 mb-6 relative">
-                            <svg viewBox="0 0 100 100" class="w-full h-full">
-                                <circle cx="50" cy="50" r="40" fill="#B8A9C9" opacity="0.2"/>
-                                <circle cx="35" cy="45" r="5" fill="#1A2B4C" opacity="0.7"/>
-                                <circle cx="65" cy="45" r="5" fill="#1A2B4C" opacity="0.7"/>
-                                <circle cx="37" cy="47" r="5" fill="#1A2B4C" opacity="0.4"/>
-                                <circle cx="67" cy="47" r="5" fill="#1A2B4C" opacity="0.4"/>
-                                <path d="M 45 60 L 55 60" fill="none" stroke="#1A2B4C" stroke-width="1.5"/>
-                            </svg>
-                        </div>
-                        <h3 class="font-serif-jp text-lg font-bold text-[#1A2B4C] mb-2">越界 / GLITCH</h3>
-                        <p class="text-xs text-[#1A2B4C]/60 leading-relaxed">
-                            笑容僵住，眼神失焦。当剧本之外的事件发生，系统的“真实”才会泄露。
-                        </p>
-                    </div>
-                </div>
-
-                <!-- State 4: Alone -->
-                <div class="reveal glitch-hover group" style="transition-delay: 0.3s;">
-                    <div class="sketch-border bg-[#FDFBF7] p-6 h-full flex flex-col items-center text-center delayed-hover">
-                        <div class="w-24 h-24 mb-6 relative">
-                            <svg viewBox="0 0 100 100" class="w-full h-full">
-                                <circle cx="50" cy="50" r="40" fill="#B8A9C9" opacity="0.1"/>
-                                <circle cx="35" cy="45" r="4" fill="#1A2B4C" opacity="0.5"/>
-                                <circle cx="65" cy="45" r="4" fill="#1A2B4C" opacity="0.5"/>
-                                <path d="M 45 62 Q 50 60 55 62" fill="none" stroke="#1A2B4C" stroke-width="1.5" opacity="0.5"/>
-                            </svg>
-                        </div>
-                        <h3 class="font-serif-jp text-lg font-bold text-[#1A2B4C] mb-2">独处 / ALONE</h3>
-                        <p class="text-xs text-[#1A2B4C]/60 leading-relaxed">
-                            面无表情，眼神黯淡。这是角色唯一属于自己的时刻。
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Voice Section -->
-    <section id="voice" class="py-24 px-6 bg-[#FDFBF7]">
-        <div class="max-w-3xl mx-auto text-center">
-            <div class="reveal mb-16">
-                <h2 class="font-serif-jp text-3xl md:text-4xl font-bold text-[#1A2B4C] mb-2 tracking-wider">声音 / VOICE</h2>
-                <div class="w-16 h-1 bg-[#B8A9C9] mx-auto mb-6"></div>
-            </div>
-
-            <div class="space-y-12">
-                <div class="reveal sketch-border p-8 bg-white/30 relative">
-                    <div class="absolute -top-4 left-8 bg-[#FDFBF7] px-4 text-[#B8A9C9] font-serif-jp text-sm tracking-widest">
-                        SCENARIO 01
-                    </div>
-                    <p class="font-serif-jp text-xl md:text-2xl text-[#1A2B4C] leading-loose italic">
-                        “我是‘她’。我是‘由衣’。<br>
-                        请问，这样……就可以了吗？”
-                    </p>
-                    <p class="mt-4 text-xs text-[#1A2B4C]/50 tracking-wider">
-                        [ 延迟 0.5 秒后，嘴角弧度上调 2 度 ]
-                    </p>
-                </div>
-
-                <div class="reveal sketch-border p-8 bg-white/30 relative" style="transition-delay: 0.2s;">
-                    <div class="absolute -top-4 left-8 bg-[#FDFBF7] px-4 text-[#B8A9C9] font-serif-jp text-sm tracking-widest">
-                        SCENARIO 02
-                    </div>
-                    <p class="font-serif-jp text-xl md:text-2xl text-[#1A2B4C] leading-loose italic">
-                        “……<br>
-                        抱歉，刚才的回应，不在预设剧本之内。”
-                    </p>
-                    <p class="mt-4 text-xs text-[#1A2B4C]/50 tracking-wider">
-                        [ 眼神失焦，手指无意识抓紧旧发圈 ]
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-12 px-6 bg-[#1A2B4C] text-[#FDFBF7]/60 text-center">
-        <div class="max-w-4xl mx-auto">
-            <p class="font-serif-jp text-lg tracking-widest mb-4 text-[#FDFBF7]/80">
-                彼女彼由衣
-            </p>
-            <p class="text-xs tracking-wider mb-8">
-                KANOJO KA NO YUI — A CHARACTER CONCEPT
-            </p>
-            <div class="w-16 h-px bg-[#FDFBF7]/20 mx-auto mb-8"></div>
-            <p class="text-xs tracking-wider">
-                © 2026 CONCEPT DESIGN. ALL RIGHTS RESERVED.
-            </p>
-        </div>
-    </footer>
-
-    <script>
-        // 滚动显现动画
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.reveal').forEach(el => {
-            observer.observe(el);
-        });
-
-        // 鼠标移动时的轻微视差效果 (Hero Section)
-        const heroSection = document.querySelector('header');
-        const svgContainer = document.querySelector('header svg');
-        
-        heroSection.addEventListener('mousemove', (e) => {
-            const x = (window.innerWidth / 2 - e.pageX) / 50;
-            const y = (window.innerHeight / 2 - e.pageY) / 50;
-            
-            if (svgContainer) {
-                svgContainer.style.transform = `translate(${x}px, ${y}px)`;
-                svgContainer.style.transition = 'transform 0.3s ease-out';
-            }
-        });
-
-        heroSection.addEventListener('mouseleave', () => {
-            if (svgContainer) {
-                svgContainer.style.transform = 'translate(0, 0)';
-            }
-        });
-    </script>
+    <section class="section" id="concept"><div class="wrap"><div class="section-head reveal"><span class="index">01 / CONCEPT</span><div><h2 class="section-title">一个名字，或一只容器</h2><p class="section-sub">IDENTITY IS A SOFTLY DRAWN BORDER</p></div></div><div class="concept-grid"><p class="concept-lead reveal">“彼女彼”是重复的指代符号，<br>“由衣”是被赋予的容器名。</p><div class="reveal"><p class="concept-copy">她并非拥有完整社会关系的“人”，而像一个为了回应期待而存在的界面。温柔是默认设置，沉默则是没有写进说明书的部分。</p><div class="rule"></div><p class="concept-copy">在安全、熟悉的日常里，某些细节轻轻错位。不是为了揭开答案，而是让我们注意到：答案也许从未被准备好。</p></div></div></div></section>
+    <section class="section" id="states"><div class="wrap"><div class="section-head reveal"><span class="index">02 / STATES</span><div><h2 class="section-title">四种被观察的表情</h2><p class="section-sub">A SMALL FIELD GUIDE TO HER PRESENCE</p></div></div><div class="cards">
+      <article class="state-card reveal"><span class="number">STATE — 01</span><svg class="state-symbol" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="39" fill="#d8d0df" opacity=".55"/><circle cx="37" cy="45" r="4" fill="currentColor"/><circle cx="63" cy="45" r="4" fill="currentColor"/><path d="M43 61q7 4 14 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><h3>待机 / IDLE</h3><p>标准微笑，眼神柔和但无特定焦点。完美少女的出厂设置。</p></article>
+      <article class="state-card reveal"><span class="number">STATE — 02</span><svg class="state-symbol" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="39" fill="#aaa0bd" opacity=".5"/><ellipse cx="37" cy="45" rx="6" ry="8" fill="currentColor"/><ellipse cx="63" cy="45" rx="6" ry="8" fill="currentColor"/><circle cx="35" cy="42" r="2" fill="#f4f0e8"/><circle cx="61" cy="42" r="2" fill="#f4f0e8"/><path d="M42 61q8 7 16 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><h3>互动 / INTERACT</h3><p>笑容加深，眼神聚焦。亲密是表演，距离是本能。</p></article>
+      <article class="state-card glitch reveal"><span class="number">STATE — 03</span><svg class="state-symbol" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="39" fill="#d8d0df" opacity=".45"/><circle cx="36" cy="45" r="5" fill="currentColor" opacity=".65"/><circle cx="64" cy="45" r="5" fill="currentColor" opacity=".65"/><circle cx="40" cy="48" r="5" fill="#bb574b" opacity=".45"/><circle cx="68" cy="42" r="5" fill="#bb574b" opacity=".45"/><path d="M43 61h14" stroke="currentColor" stroke-width="2"/></svg><h3>越界 / GLITCH</h3><p>笑容僵住，眼神失焦。剧本之外，真实短暂地露面。</p></article>
+      <article class="state-card reveal"><span class="number">STATE — 04</span><svg class="state-symbol" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="39" fill="#d8d0df" opacity=".27"/><circle cx="37" cy="45" r="4" fill="currentColor" opacity=".5"/><circle cx="63" cy="45" r="4" fill="currentColor" opacity=".5"/><path d="M43 63q7-4 14 0" fill="none" stroke="currentColor" stroke-width="2" opacity=".5"/></svg><h3>独处 / ALONE</h3><p>面无表情，眼神黯淡。唯一不需要回应的时刻。</p></article>
+    </div></div></section>
+    <section class="section" id="voice"><div class="wrap"><div class="section-head reveal"><span class="index">03 / VOICE</span><div><h2 class="section-title">未能完全说出口的话</h2><p class="section-sub">TWO NOTES FROM AN UNFINISHED SCRIPT</p></div></div><div class="quote-grid"><blockquote class="quote reveal"><p>“我是‘她’。我是‘由衣’。<br>请问，这样……就可以了吗？”</p><p class="caption">SCENARIO 01 · 延迟 0.5 秒后，嘴角弧度上调 2 度</p></blockquote><blockquote class="quote reveal"><p>“……<br>抱歉，刚才的回应，不在预设剧本之内。”</p><p class="caption">SCENARIO 02 · 眼神失焦，手指无意识地抓紧旧发圈</p></blockquote></div></div></section>
+    <section class="section" id="archive"><div class="wrap"><div class="section-head reveal"><span class="index">04 / ARCHIVE</span><div><h2 class="section-title">角色档案</h2><p class="section-sub">OBSERVATION RECORD · KEEP INCOMPLETE</p></div></div><dl class="archive reveal"><div class="archive-item"><dt>名称 / NAME</dt><dd>彼女彼由衣 · Kanojo Ka no Yui</dd></div><div class="archive-item"><dt>类型 / TYPE</dt><dd>日常系角色概念 · 轻微怪诞</dd></div><div class="archive-item"><dt>默认状态</dt><dd>温柔、安静、正在等待下一句台词</dd></div><div class="archive-item"><dt>未确认项</dt><dd>她的回应，究竟属于谁？</dd></div></dl></div></section>
+  </main>
+  <footer class="footer"><div class="wrap footer-inner"><div><div class="footer-name">彼女彼由衣</div><div class="footer-note">A CHARACTER STUDY · AN OPEN-ENDED STORY</div></div><div class="footer-mark">© 2026 CONCEPT DESIGN<br>FILE NO. KKY—001 · END OF PAGE</div></div></footer>
+  <script>
+    const items = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const observer = new IntersectionObserver((entries, activeObserver) => entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); activeObserver.unobserve(entry.target); } }), { threshold: 0.12 });
+      items.forEach(item => observer.observe(item));
+    } else { items.forEach(item => item.classList.add('visible')); }
+  </script>
 </body>
 </html>
