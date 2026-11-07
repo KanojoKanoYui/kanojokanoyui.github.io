@@ -1,0 +1,1205 @@
+{
+  "searched_at": "2026-11-07",
+  "api": "https://api.openverse.org/v1/images/",
+  "filter": "license=cc0,pdm only",
+  "note": "Pixiv works are copyright-protected by default and were NOT downloaded; Openverse CC0/PDM results verified individually before use.",
+  "queries": {
+    "ukiyo-e-wave": {
+      "query": "hokusai wave ukiyo-e",
+      "purpose": "海浪纹样 — 关系如潮汐的借还循环",
+      "result_count": 14,
+      "candidates": [
+        {
+          "id": "b60d1100-3af1-4cd4-b360-2ff25d80b1aa",
+          "title": "Half-Moon Outfitters Mural",
+          "creator": "Greenville, SC Daily Photo",
+          "creator_url": "https://www.flickr.com/photos/120143184@N05",
+          "foreign_landing_url": "https://www.flickr.com/photos/120143184@N05/47943195583",
+          "url": "https://live.staticflickr.com/65535/47943195583_dbc4c61bb3_b.jpg",
+          "thumbnail": "https://api.openverse.org/v1/images/b60d1100-3af1-4cd4-b360-2ff25d80b1aa/thumb/",
+          "license": "cc0",
+          "license_version": "1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source": "flickr",
+          "filetype": null,
+          "width": 1024,
+          "height": 536,
+          "tags": []
+        },
+        {
+          "id": "a6f11ff8-cfb2-42af-a198-8c557424a4b4",
+          "title": "Katsushika Hokusai 's Feminine Wave",
+          "creator": null,
+          "creator_url": null,
+          "foreign_landing_url": "https://www.rawpixel.com/image/21830177/katsushika-hokusais-feminine-wave-1845",
+          "url": "https://images.rawpixel.com/editor_1024/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI1LTA5L3BkYXJ0MjAyNTIwLTMxLWltYWdlLmpwZw.jpg",
+          "thumbnail": "https://api.openverse.org/v1/images/a6f11ff8-cfb2-42af-a198-8c557424a4b4/thumb/",
+          "license": "cc0",
+          "license_version": "1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source": "rawpixel",
+          "filetype": "jpg",
+          "width": 1616,
+          "height": 1608,
+          "tags": [
+            {
+              "name": "hokusai wave",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "katsushika",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "katsushika hokusai wave",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "ukiyo e",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "wave",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            }
+          ]
+        },
+        {
+          "id": "6b77d3d1-4840-49a0-852c-0b273219734d",
+          "title": "Katsushika Hokusai 's Ocean Waves",
+          "creator": null,
+          "creator_url": null,
+          "foreign_landing_url": "https://www.rawpixel.com/image/21830181/katsushika-hokusais-ocean-waves-1833",
+          "url": "https://images.rawpixel.com/editor_1024/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI1LTA5L3BkYXJ0MjAyNTIwLTMzLWltYWdlLW1mNmJoZXR1LmpwZw.jpg",
+          "thumbnail": "https://api.openverse.org/v1/images/6b77d3d1-4840-49a0-852c-0b273219734d/thumb/",
+          "license": "cc0",
+          "license_version": "1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source": "rawpixel",
+          "filetype": "jpg",
+          "width": 3327,
+          "height": 2345,
+          "tags": [
+            {
+              "name": "hokusai woodblock prints",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "japanese woodblock",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "katsushika hokusai",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "ukiyo-e",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "ukiyo-e prints",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "wave",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            }
+          ]
+        },
+        {
+          "id": "e7eb6e2e-4cd1-46bd-be46-9f7992f13b17",
+          "title": "Hokusai's Great Wave Kanagawa (1760-1849)",
+          "creator": null,
+          "creator_url": null,
+          "foreign_landing_url": "https://www.rawpixel.com/image/9007543/image-art-public-domain-blue",
+          "url": "https://images.rawpixel.com/editor_1024/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTEyL3JtNjE4LXBkbWlzYzMtd2syNjQ2MjEwLWltYWdlLmpwZw.jpg",
+          "thumbnail": "https://api.openverse.org/v1/images/e7eb6e2e-4cd1-46bd-be46-9f7992f13b17/thumb/",
+          "license": "cc0",
+          "license_version": "1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source": "rawpixel",
+          "filetype": "jpg",
+          "width": 4335,
+          "height": 2990,
+          "tags": [
+            {
+              "name": "great wave",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "great wave off kanagawa",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "hokusai",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "japanese ukiyo-e art",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "ocean",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "the great wave",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "ukiyo-e",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "wave",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            }
+          ]
+        },
+        {
+          "id": "a065b89a-540b-4c24-b60c-30e45b511e4f",
+          "title": "Hokusai's Wave Kanagawa (1830-1833) vintage",
+          "creator": null,
+          "creator_url": null,
+          "foreign_landing_url": "https://www.rawpixel.com/image/7660749/image-art-vintage-public-domain",
+          "url": "https://images.rawpixel.com/editor_1024/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA5L3BkbWlzYzNiYXRjaDItbWlhOTg3NC1pbWFnZV8xLmpwZw.jpg",
+          "thumbnail": "https://api.openverse.org/v1/images/a065b89a-540b-4c24-b60c-30e45b511e4f/thumb/",
+          "license": "cc0",
+          "license_version": "1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source": "rawpixel",
+          "filetype": "jpg",
+          "width": 2530,
+          "height": 1716,
+          "tags": [
+            {
+              "name": "hokusai",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "japan",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "kanagawa",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "katsushika hokusai",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "sea",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "ukiyo e",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "under the wave off kanagawa",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "wave",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            }
+          ]
+        },
+        {
+          "id": "bbbea26f-61fa-4e6b-ae61-3eb7535f695d",
+          "title": "Great Wave Kanagawa (神奈川沖波裏) (1831)",
+          "creator": "libraryofcongress",
+          "creator_url": null,
+          "foreign_landing_url": "https://www.rawpixel.com/image/8650130/image-art-vintage-public-domain",
+          "url": "https://images.rawpixel.com/editor_1024/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAzLzE4MzNfa2FuYWdhd2Ffb2tpX25hbWlfdXJhLmpwZw.jpg",
+          "thumbnail": "https://api.openverse.org/v1/images/bbbea26f-61fa-4e6b-ae61-3eb7535f695d/thumb/",
+          "license": "cc0",
+          "license_version": "1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source": "rawpixel",
+          "filetype": "tiff",
+          "width": 8561,
+          "height": 6037,
+          "tags": [
+            {
+              "name": "great wave off kanagawa",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "hokusai",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "the great wave",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "the great wave off kanagawa",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "ukiyo-e",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "vintage ukiyo-e",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "wave art",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            }
+          ]
+        }
+      ]
+    },
+    "japan-textile": {
+      "query": "japanese textile pattern woodblock",
+      "purpose": "和染织物纹样 — 「由衣」衣物意象",
+      "result_count": 240,
+      "candidates": [
+        {
+          "id": "3bd402f4-89fa-4c7c-b4c0-c9bba1366723",
+          "title": "Vintage woodblock print Japanese textile",
+          "creator": "",
+          "creator_url": null,
+          "foreign_landing_url": "https://www.rawpixel.com/image/420281/free-illustration-image-pattern-japanese-patterns-asian-illustrations-graphic-design",
+          "url": "https://images.rawpixel.com/editor_1024/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcGQzMy1qai0wMjIuanBn.jpg",
+          "thumbnail": "https://api.openverse.org/v1/images/3bd402f4-89fa-4c7c-b4c0-c9bba1366723/thumb/",
+          "license": "cc0",
+          "license_version": "1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source": "rawpixel",
+          "filetype": "tiff",
+          "width": 4779,
+          "height": 6540,
+          "tags": [
+            {
+              "name": "furuya korin",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "japanese",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "japanese patterns",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "pattern",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "shima",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "textile",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "woodblock pattern",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            }
+          ]
+        },
+        {
+          "id": "e0982d1c-fa86-4a09-bdcb-f1314a7c7d3b",
+          "title": "Vintage woodblock print Japanese textile",
+          "creator": "",
+          "creator_url": null,
+          "foreign_landing_url": "https://www.rawpixel.com/image/420264/free-illustration-image-pattern-japanese-textiles-vintage-fabric",
+          "url": "https://images.rawpixel.com/editor_1024/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcGQzMy1qai0wMDY1LmpwZw.jpg",
+          "thumbnail": "https://api.openverse.org/v1/images/e0982d1c-fa86-4a09-bdcb-f1314a7c7d3b/thumb/",
+          "license": "cc0",
+          "license_version": "1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source": "rawpixel",
+          "filetype": "tiff",
+          "width": 4285,
+          "height": 4285,
+          "tags": [
+            {
+              "name": "furuya",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "furuya korin",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "japanese patterns",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "japanese textiles",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "japanese woodblock",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "pattern",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "shima",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            }
+          ]
+        },
+        {
+          "id": "0ed41760-dc8f-44b9-84fc-6e4f36a271ca",
+          "title": "Vintage woodblock print Japanese textile",
+          "creator": "",
+          "creator_url": null,
+          "foreign_landing_url": "https://www.rawpixel.com/image/420084/free-illustration-image-shima-japanese-woodblock-print",
+          "url": "https://images.rawpixel.com/editor_1024/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcGQzMy1qai0wMDAwMzkuanBn.jpg",
+          "thumbnail": "https://api.openverse.org/v1/images/0ed41760-dc8f-44b9-84fc-6e4f36a271ca/thumb/",
+          "license": "cc0",
+          "license_version": "1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source": "rawpixel",
+          "filetype": "tiff",
+          "width": 1972,
+          "height": 2756,
+          "tags": [
+            {
+              "name": "furuya",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "furuya korin",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "japanese",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "japanese patterns",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "pattern",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "shima",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "textile",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "woodblock",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            }
+          ]
+        },
+        {
+          "id": "4fa81a35-18c4-422b-a6af-b4936000278f",
+          "title": "Vintage woodblock print Japanese textile",
+          "creator": "",
+          "creator_url": null,
+          "foreign_landing_url": "https://www.rawpixel.com/image/420268/free-illustration-image-art-deco-pattern-woodblock",
+          "url": "https://images.rawpixel.com/editor_1024/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcGQzMy1qai0wMDc0LmpwZw.jpg",
+          "thumbnail": "https://api.openverse.org/v1/images/4fa81a35-18c4-422b-a6af-b4936000278f/thumb/",
+          "license": "cc0",
+          "license_version": "1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source": "rawpixel",
+          "filetype": "tiff",
+          "width": 4553,
+          "height": 4553,
+          "tags": [
+            {
+              "name": "furuya korin",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "japanese woodblock",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "pattern",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "shima shima",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "textile",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "woodblock",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            }
+          ]
+        },
+        {
+          "id": "2024005b-94fe-485d-ac57-5031f6a5ceee",
+          "title": "Vintage woodblock print Japanese textile",
+          "creator": "",
+          "creator_url": null,
+          "foreign_landing_url": "https://www.rawpixel.com/image/420031/free-illustration-image-japanese-patterns-japan-public-domain-shima",
+          "url": "https://images.rawpixel.com/editor_1024/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcGQtamotMDAwMDM4XzAuanBn.jpg",
+          "thumbnail": "https://api.openverse.org/v1/images/2024005b-94fe-485d-ac57-5031f6a5ceee/thumb/",
+          "license": "cc0",
+          "license_version": "1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source": "rawpixel",
+          "filetype": "tiff",
+          "width": 2340,
+          "height": 2340,
+          "tags": [
+            {
+              "name": "furuya korin",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "japan pattern",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "japanese pattern",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "japanese woodblock",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "pattern",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "shima shima",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "textile",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            }
+          ]
+        },
+        {
+          "id": "1ac94b8a-66a8-415c-9699-dd7a26e32867",
+          "title": "Vintage woodblock print Japanese textile",
+          "creator": "",
+          "creator_url": null,
+          "foreign_landing_url": "https://www.rawpixel.com/image/420074/free-illustration-image-pattern-japanese-patterns-woodblock",
+          "url": "https://images.rawpixel.com/editor_1024/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcGQzMy1qai0wMDAwMjcuanBn.jpg",
+          "thumbnail": "https://api.openverse.org/v1/images/1ac94b8a-66a8-415c-9699-dd7a26e32867/thumb/",
+          "license": "cc0",
+          "license_version": "1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source": "rawpixel",
+          "filetype": "tiff",
+          "width": 2526,
+          "height": 2526,
+          "tags": [
+            {
+              "name": "fabric",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "furuya korin",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "japanese",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "japanese pattern",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "japanese textile",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "pattern",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "shima shima",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "woodblock",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            }
+          ]
+        }
+      ]
+    },
+    "asmr-headphones": {
+      "query": "headphones still life",
+      "purpose": "耳机静物 — EP1 换装叙事道具",
+      "result_count": 3,
+      "candidates": [
+        {
+          "id": "bfecb1e1-4ded-4761-a8c6-e752581d0fec",
+          "title": "3 LIFE LESSONS I’VE LEARNED LIVING IN HANOI FOR 8 MONTHS",
+          "creator": "Eric Seneca Kim",
+          "creator_url": "https://www.flickr.com/photos/77356818@N00",
+          "foreign_landing_url": "https://www.flickr.com/photos/77356818@N00/33034758493",
+          "url": "https://live.staticflickr.com/3939/33034758493_ef6c3c8134_b.jpg",
+          "thumbnail": "https://api.openverse.org/v1/images/bfecb1e1-4ded-4761-a8c6-e752581d0fec/thumb/",
+          "license": "pdm",
+          "license_version": "1.0",
+          "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "source": "flickr",
+          "filetype": null,
+          "width": 1024,
+          "height": 678,
+          "tags": [
+            {
+              "name": "black",
+              "accuracy": null,
+              "unstable__provider": "flickr"
+            },
+            {
+              "name": "eric",
+              "accuracy": null,
+              "unstable__provider": "flickr"
+            },
+            {
+              "name": "hanoi",
+              "accuracy": null,
+              "unstable__provider": "flickr"
+            },
+            {
+              "name": "kim",
+              "accuracy": null,
+              "unstable__provider": "flickr"
+            },
+            {
+              "name": "life",
+              "accuracy": null,
+              "unstable__provider": "flickr"
+            },
+            {
+              "name": "photography",
+              "accuracy": null,
+              "unstable__provider": "flickr"
+            },
+            {
+              "name": "street",
+              "accuracy": null,
+              "unstable__provider": "flickr"
+            },
+            {
+              "name": "white",
+              "accuracy": null,
+              "unstable__provider": "flickr"
+            }
+          ]
+        },
+        {
+          "id": "5c16dd03-d9c0-44e7-87c0-2f1f2fe0ab97",
+          "title": "Still Life with Zero to One Book and iPad",
+          "creator": "Image Catalog",
+          "creator_url": "https://www.flickr.com/photos/132795455@N08",
+          "foreign_landing_url": "https://www.flickr.com/photos/132795455@N08/19275151581",
+          "url": "https://live.staticflickr.com/3770/19275151581_b02723d520_b.jpg",
+          "thumbnail": "https://api.openverse.org/v1/images/5c16dd03-d9c0-44e7-87c0-2f1f2fe0ab97/thumb/",
+          "license": "cc0",
+          "license_version": "1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source": "flickr",
+          "filetype": null,
+          "width": 1024,
+          "height": 680,
+          "tags": [
+            {
+              "name": "apple",
+              "accuracy": null,
+              "unstable__provider": "flickr"
+            },
+            {
+              "name": "book",
+              "accuracy": null,
+              "unstable__provider": "flickr"
+            },
+            {
+              "name": "headphones",
+              "accuracy": null,
+              "unstable__provider": "flickr"
+            },
+            {
+              "name": "ipad",
+              "accuracy": null,
+              "unstable__provider": "flickr"
+            },
+            {
+              "name": "keyring",
+              "accuracy": null,
+              "unstable__provider": "flickr"
+            },
+            {
+              "name": "keys",
+              "accuracy": null,
+              "unstable__provider": "flickr"
+            },
+            {
+              "name": "pens",
+              "accuracy": null,
+              "unstable__provider": "flickr"
+            },
+            {
+              "name": "peterthiel",
+              "accuracy": null,
+              "unstable__provider": "flickr"
+            },
+            {
+              "name": "publicdomain",
+              "accuracy": null,
+              "unstable__provider": "flickr"
+            },
+            {
+              "name": "stilllife",
+              "accuracy": null,
+              "unstable__provider": "flickr"
+            },
+            {
+              "name": "sunglasses",
+              "accuracy": null,
+              "unstable__provider": "flickr"
+            },
+            {
+              "name": "usbcord",
+              "accuracy": null,
+              "unstable__provider": "flickr"
+            },
+            {
+              "name": "whitebackground",
+              "accuracy": null,
+              "unstable__provider": "flickr"
+            },
+            {
+              "name": "zerotoone",
+              "accuracy": null,
+              "unstable__provider": "flickr"
+            }
+          ]
+        },
+        {
+          "id": "03ec6633-963b-4cba-b8f6-9fd914783cf5",
+          "title": null,
+          "creator": null,
+          "creator_url": null,
+          "foreign_landing_url": "https://www.rawpixel.com/image/5958176/free-public-domain-cc0-photo",
+          "url": "https://images.rawpixel.com/editor_1024/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcHgxMzYzMDM5LWltYWdlLWt3eXFtOGo5LmpwZw.jpg",
+          "thumbnail": "https://api.openverse.org/v1/images/03ec6633-963b-4cba-b8f6-9fd914783cf5/thumb/",
+          "license": "cc0",
+          "license_version": "1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source": "rawpixel",
+          "filetype": "jpg",
+          "width": 3888,
+          "height": 2592,
+          "tags": [
+            {
+              "name": "dumbbell",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "gym",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "gym photography",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "headphones gym",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "lifting",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "person photo",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            },
+            {
+              "name": "still life sand",
+              "accuracy": null,
+              "unstable__provider": "rawpixel"
+            }
+          ]
+        }
+      ]
+    },
+    "pastel-bedroom": {
+      "query": "pink bedroom",
+      "purpose": "粉色系卧室 — 糖果色日常空间",
+      "result_count": 23,
+      "candidates": [
+        {
+          "id": "24c1d860-61c4-4a1e-8899-7c8d6abfcad5",
+          "title": "In my bedroom all ready to go out in a pink chiffon dress",
+          "creator": "Lisa Lowan",
+          "creator_url": "https://www.flickr.com/photos/132309892@N02",
+          "foreign_landing_url": "https://www.flickr.com/photos/132309892@N02/37338453942",
+          "url": "https://live.staticflickr.com/4514/37338453942_d8f131a60c_b.jpg",
+          "thumbnail": "https://api.openverse.org/v1/images/24c1d860-61c4-4a1e-8899-7c8d6abfcad5/thumb/",
+          "license": "pdm",
+          "license_version": "1.0",
+          "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "source": "flickr",
+          "filetype": null,
+          "width": 1024,
+          "height": 750
+        },
+        {
+          "id": "b9910b85-de7e-485d-bfef-dccfd3fea2ee",
+          "title": "Mother Joy",
+          "creator": "Direct Media",
+          "creator_url": "https://stocksnap.io/author/145556",
+          "foreign_landing_url": "https://stocksnap.io/photo/mother-joy-VCJAWE6IMF",
+          "url": "https://cdn.stocksnap.io/img-thumbs/960w/VCJAWE6IMF.jpg",
+          "thumbnail": "https://api.openverse.org/v1/images/b9910b85-de7e-485d-bfef-dccfd3fea2ee/thumb/",
+          "license": "cc0",
+          "license_version": "1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source": "stocksnap",
+          "filetype": "jpg",
+          "width": 5792,
+          "height": 8688
+        },
+        {
+          "id": "8574d803-8c7c-45ce-83b7-ce75d53c7e95",
+          "title": "Project 365 #146: 260525 This One's A Keeper...",
+          "creator": "comedy_nose",
+          "creator_url": "https://www.flickr.com/photos/23408922@N07",
+          "foreign_landing_url": "https://www.flickr.com/photos/23408922@N07/54547099350",
+          "url": "https://live.staticflickr.com/65535/54547099350_d184e7fce3_b.jpg",
+          "thumbnail": "https://api.openverse.org/v1/images/8574d803-8c7c-45ce-83b7-ce75d53c7e95/thumb/",
+          "license": "cc0",
+          "license_version": "1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source": "flickr",
+          "filetype": "jpg",
+          "width": 1024,
+          "height": 683
+        },
+        {
+          "id": "0b593038-a895-4d48-9ff3-5469661cdb4b",
+          "title": "Coiffure illustration Mary Cassatt (1844-1926)",
+          "creator": "libraryofcongress",
+          "creator_url": null,
+          "foreign_landing_url": "https://www.rawpixel.com/image/429749/free-illustration-image-pink-hair-mary-cassatt",
+          "url": "https://images.rawpixel.com/editor_1024/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcGQxOS0xMDEwOS5qcGc.jpg",
+          "thumbnail": "https://api.openverse.org/v1/images/0b593038-a895-4d48-9ff3-5469661cdb4b/thumb/",
+          "license": "cc0",
+          "license_version": "1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source": "rawpixel",
+          "filetype": "tiff",
+          "width": 4959,
+          "height": 6800
+        },
+        {
+          "id": "b8bfecee-68d9-4610-8e9b-1097e9776102",
+          "title": "Free pale pink flowers spread",
+          "creator": null,
+          "creator_url": null,
+          "foreign_landing_url": "https://www.rawpixel.com/image/5928306/photo-image-background-flowers-book",
+          "url": "https://images.rawpixel.com/editor_1024/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L2JzMTM4Ni1pbWFnZS1rd3Z5bThidy5qcGc.jpg",
+          "thumbnail": "https://api.openverse.org/v1/images/b8bfecee-68d9-4610-8e9b-1097e9776102/thumb/",
+          "license": "cc0",
+          "license_version": "1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source": "rawpixel",
+          "filetype": "jpg",
+          "width": 4460,
+          "height": 2973
+        },
+        {
+          "id": "a64449fb-a000-4bea-b518-035d36c6a3d0",
+          "title": "Baroque bed clipart, furniture illustration",
+          "creator": null,
+          "creator_url": null,
+          "foreign_landing_url": "https://www.rawpixel.com/image/6443995/image-vintage-public-domain-pink",
+          "url": "https://images.rawpixel.com/editor_1024/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvam9iNjgzLTAxMzMteC5qcGc.jpg",
+          "thumbnail": "https://api.openverse.org/v1/images/a64449fb-a000-4bea-b518-035d36c6a3d0/thumb/",
+          "license": "cc0",
+          "license_version": "1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source": "rawpixel",
+          "filetype": "jpg",
+          "width": 4000,
+          "height": 4000
+        }
+      ]
+    },
+    "convenience-store": {
+      "query": "konbini convenience store night",
+      "purpose": "深夜便利店 — 租借关系的都市场景",
+      "result_count": 0,
+      "candidates": []
+    },
+    "konbini": {
+      "query": "convenience store night",
+      "purpose": "深夜便利店 — 租借关系的都市场景",
+      "result_count": 44,
+      "candidates": [
+        {
+          "id": "ac67e5a1-7df9-46a8-881e-a45e2cdab46d",
+          "title": "GD 廣東 Guangdong GZ 廣州 Guangzhou 海珠區 Haizhu 琶洲 Pazhou 新港東路 10 Xingang East Road 琶洲保利廣場 Poly Plaza 美晞匯 MeiXiHui Mall shop 初心優品幫扶 Convenience store night November 2024 R12S",
+          "creator": "AIFONGE 8002",
+          "creator_url": "https://commons.wikimedia.org/wiki/User:AIFONGE_8002",
+          "foreign_landing_url": "https://commons.wikimedia.org/w/index.php?curid=154949709",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/d/d6/GD_%E5%BB%A3%E6%9D%B1_Guangdong_GZ_%E5%BB%A3%E5%B7%9E_Guangzhou_%E6%B5%B7%E7%8F%A0%E5%8D%80_Haizhu_%E7%90%B6%E6%B4%B2_Pazhou_%E6%96%B0%E6%B8%AF%E6%9D%B1%E8%B7%AF_10_Xingang_East_Road_%E7%90%B6%E6%B4%B2%E4%BF%9D%E5%88%A9%E5%BB%A3%E5%A0%B4_Poly_Plaza_%E7%BE%8E%E6%99%9E%E5%8C%AF_MeiXiHui_Mall_shop_%E5%88%9D%E5%BF%83%E5%84%AA%E5%93%81%E5%B9%AB%E6%89%B6_Convenience_store_night_November_2024_R12S.jpg",
+          "thumbnail": "https://api.openverse.org/v1/images/ac67e5a1-7df9-46a8-881e-a45e2cdab46d/thumb/",
+          "license": "cc0",
+          "license_version": "1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en/",
+          "source": "wikimedia",
+          "filetype": "jpg",
+          "width": 4000,
+          "height": 3000
+        },
+        {
+          "id": "909f0902-91b2-4bed-ba92-41689c709bf4",
+          "title": "Queensland Government Covid Border Closure Advertisement 2020",
+          "creator": "AS 1979",
+          "creator_url": "https://www.flickr.com/photos/86792135@N04",
+          "foreign_landing_url": "https://www.flickr.com/photos/86792135@N04/52061780365",
+          "url": "https://live.staticflickr.com/65535/52061780365_a29c8e4507_b.jpg",
+          "thumbnail": "https://api.openverse.org/v1/images/909f0902-91b2-4bed-ba92-41689c709bf4/thumb/",
+          "license": "pdm",
+          "license_version": "1.0",
+          "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "source": "flickr",
+          "filetype": "jpg",
+          "width": 1024,
+          "height": 732
+        },
+        {
+          "id": "0cc5458a-4db0-40df-8f1c-5faf510d276c",
+          "title": "Australian Government Covid Advertisement",
+          "creator": "AS 1979",
+          "creator_url": "https://www.flickr.com/photos/86792135@N04",
+          "foreign_landing_url": "https://www.flickr.com/photos/86792135@N04/52061318853",
+          "url": "https://live.staticflickr.com/65535/52061318853_65b8e7b173_b.jpg",
+          "thumbnail": "https://api.openverse.org/v1/images/0cc5458a-4db0-40df-8f1c-5faf510d276c/thumb/",
+          "license": "pdm",
+          "license_version": "1.0",
+          "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "source": "flickr",
+          "filetype": "jpg",
+          "width": 643,
+          "height": 1024
+        },
+        {
+          "id": "c391ca00-9eb0-435d-8595-21fd878026db",
+          "title": "Spotlight Newspaper Advertisement - Stage 4 Lockdown",
+          "creator": "AS 1979",
+          "creator_url": "https://www.flickr.com/photos/86792135@N04",
+          "foreign_landing_url": "https://www.flickr.com/photos/86792135@N04/52051771866",
+          "url": "https://live.staticflickr.com/65535/52051771866_bd2fd4324c_b.jpg",
+          "thumbnail": "https://api.openverse.org/v1/images/c391ca00-9eb0-435d-8595-21fd878026db/thumb/",
+          "license": "pdm",
+          "license_version": "1.0",
+          "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "source": "flickr",
+          "filetype": "jpg",
+          "width": 750,
+          "height": 1024
+        },
+        {
+          "id": "0f7bec10-3c7f-43f3-a53f-6e27fcb2e1e9",
+          "title": "Spotligt Newspaper Advertisement - Stage 4 Lockdown",
+          "creator": "AS 1979",
+          "creator_url": "https://www.flickr.com/photos/86792135@N04",
+          "foreign_landing_url": "https://www.flickr.com/photos/86792135@N04/52050721467",
+          "url": "https://live.staticflickr.com/65535/52050721467_10d9790ec2_b.jpg",
+          "thumbnail": "https://api.openverse.org/v1/images/0f7bec10-3c7f-43f3-a53f-6e27fcb2e1e9/thumb/",
+          "license": "pdm",
+          "license_version": "1.0",
+          "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "source": "flickr",
+          "filetype": "jpg",
+          "width": 750,
+          "height": 1024
+        },
+        {
+          "id": "64b4b5d8-7d27-4085-9c29-4bd0dc6d2b44",
+          "title": "Red Rooster Flyer - Stage 4 Lockdown",
+          "creator": "AS 1979",
+          "creator_url": "https://www.flickr.com/photos/86792135@N04",
+          "foreign_landing_url": "https://www.flickr.com/photos/86792135@N04/52052228260",
+          "url": "https://live.staticflickr.com/65535/52052228260_083b70bc6b_b.jpg",
+          "thumbnail": "https://api.openverse.org/v1/images/64b4b5d8-7d27-4085-9c29-4bd0dc6d2b44/thumb/",
+          "license": "pdm",
+          "license_version": "1.0",
+          "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "source": "flickr",
+          "filetype": "jpg",
+          "width": 724,
+          "height": 1024
+        }
+      ]
+    },
+    "sakura-vintage": {
+      "query": "cherry blossom vintage engraving",
+      "purpose": "樱与春 — 季节流转意象",
+      "result_count": 0,
+      "candidates": []
+    },
+    "konbini-lawson": {
+      "query": "lawson convenience store japan",
+      "purpose": "便利店外观（Lawson）— 都市场景",
+      "result_count": 1,
+      "candidates": [
+        {
+          "id": "85b9faab-0aeb-4a94-a163-0df44f4a00a3",
+          "title": "DSC01489",
+          "creator": "╬ಠ益ಠ)",
+          "foreign_landing_url": "https://www.flickr.com/photos/91174746@N02/16164813099",
+          "url": "https://live.staticflickr.com/7515/16164813099_05faf599a2_b.jpg",
+          "thumbnail": "https://api.openverse.org/v1/images/85b9faab-0aeb-4a94-a163-0df44f4a00a3/thumb/",
+          "license": "cc0",
+          "license_version": "1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source": "flickr",
+          "filetype": null,
+          "width": 1024,
+          "height": 683
+        }
+      ]
+    },
+    "konbini-711": {
+      "query": "7-eleven storefront japan",
+      "purpose": "便利店外观（7-Eleven）— 都市场景",
+      "result_count": 0,
+      "candidates": []
+    },
+    "night-street": {
+      "query": "japanese street tokyo night neon",
+      "purpose": "夜晚街道霓虹 — 都市夜色场景",
+      "result_count": 1,
+      "candidates": [
+        {
+          "id": "f158c602-90fd-4178-99e2-c4fee1c436e2",
+          "title": "Wet Street Night, Akihabara, Chiyoda",
+          "creator": null,
+          "foreign_landing_url": "https://www.rawpixel.com/image/5938029/photo-image-lights-public-domain-person",
+          "url": "https://images.rawpixel.com/editor_1024/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA2L3NrOTUyOS1pbWFnZS1rd3luaHYzdC5qcGc.jpg",
+          "thumbnail": "https://api.openverse.org/v1/images/f158c602-90fd-4178-99e2-c4fee1c436e2/thumb/",
+          "license": "cc0",
+          "license_version": "1.0",
+          "source": "rawpixel",
+          "width": 3024,
+          "height": 4032
+        }
+      ]
+    },
+    "shima-extra": {
+      "query": "vintage japanese fabric pattern shima",
+      "purpose": "岛纹织物图鉴 — 和柄补充",
+      "result_count": 126,
+      "candidates": [
+        {
+          "id": "a51cc27e-67bc-4584-8eb4-4dca2033aa17",
+          "title": "Vintage woodblock print Japanese textile",
+          "creator": "",
+          "foreign_landing_url": "https://www.rawpixel.com/image/420246/free-illustration-image-patterns-art-deco-japanese",
+          "url": "https://images.rawpixel.com/editor_1024/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcGQzMy1qai0wMDU3LmpwZw.jpg",
+          "thumbnail": "https://api.openverse.org/v1/images/a51cc27e-67bc-4584-8eb4-4dca2033aa17/thumb/",
+          "license": "cc0",
+          "license_version": "1.0",
+          "source": "rawpixel",
+          "width": 2551,
+          "height": 3015
+        },
+        {
+          "id": "23920fa9-e591-4a31-884b-378262b12ad5",
+          "title": "Vintage woodblock print Japanese textile",
+          "creator": "",
+          "foreign_landing_url": "https://www.rawpixel.com/image/420120/free-illustration-image-japanese-patterns-pattern-furuya",
+          "url": "https://images.rawpixel.com/editor_1024/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcGQzMy1qai0wMDAwOS5qcGc.jpg",
+          "thumbnail": "https://api.openverse.org/v1/images/23920fa9-e591-4a31-884b-378262b12ad5/thumb/",
+          "license": "cc0",
+          "license_version": "1.0",
+          "source": "rawpixel",
+          "width": 2053,
+          "height": 2053
+        },
+        {
+          "id": "fecaeb0f-27f5-42d8-bc62-abda524bc51e",
+          "title": "Vintage woodblock print Japanese textile",
+          "creator": "",
+          "foreign_landing_url": "https://www.rawpixel.com/image/420169/free-illustration-image-patterns-art-deco-background-japanese-print-pattern",
+          "url": "https://images.rawpixel.com/editor_1024/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcGQzMy1qai0wMDA1OS5qcGc.jpg",
+          "thumbnail": "https://api.openverse.org/v1/images/fecaeb0f-27f5-42d8-bc62-abda524bc51e/thumb/",
+          "license": "cc0",
+          "license_version": "1.0",
+          "source": "rawpixel",
+          "width": 2835,
+          "height": 4111
+        },
+        {
+          "id": "b5bb632e-9541-4392-b7a1-a9aa93ec5c73",
+          "title": "Vintage woodblock print Japanese textile",
+          "creator": "",
+          "foreign_landing_url": "https://www.rawpixel.com/image/420230/free-illustration-image-pattern-shima-woodblock-print",
+          "url": "https://images.rawpixel.com/editor_1024/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcGQzMy1qai0wMDQuanBn.jpg",
+          "thumbnail": "https://api.openverse.org/v1/images/b5bb632e-9541-4392-b7a1-a9aa93ec5c73/thumb/",
+          "license": "cc0",
+          "license_version": "1.0",
+          "source": "rawpixel",
+          "width": 4863,
+          "height": 6560
+        },
+        {
+          "id": "ceb5b014-cd05-41ec-80fd-4a5284507015",
+          "title": "Vintage woodblock print Japanese textile",
+          "creator": "",
+          "foreign_landing_url": "https://www.rawpixel.com/image/420092/free-illustration-image-pattern-vintage-wallpaper-striped",
+          "url": "https://images.rawpixel.com/editor_1024/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcGQzMy1qai0wMDAwNDYuanBn.jpg",
+          "thumbnail": "https://api.openverse.org/v1/images/ceb5b014-cd05-41ec-80fd-4a5284507015/thumb/",
+          "license": "cc0",
+          "license_version": "1.0",
+          "source": "rawpixel",
+          "width": 2146,
+          "height": 2650
+        },
+        {
+          "id": "44079365-4373-493e-9633-6331fe09b8e5",
+          "title": "Vintage woodblock print Japanese textile",
+          "creator": "",
+          "foreign_landing_url": "https://www.rawpixel.com/image/420282/free-illustration-image-patterns-creative-commons-blue-pattern-vintage-fabric",
+          "url": "https://images.rawpixel.com/editor_1024/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcGQzMy1qai0wMjMuanBn.jpg",
+          "thumbnail": "https://api.openverse.org/v1/images/44079365-4373-493e-9633-6331fe09b8e5/thumb/",
+          "license": "cc0",
+          "license_version": "1.0",
+          "source": "rawpixel",
+          "width": 4820,
+          "height": 6742
+        },
+        {
+          "id": "f7a2c3cb-8948-4688-a6c1-a8a5e1e36bd2",
+          "title": "Vintage woodblock print Japanese textile",
+          "creator": "",
+          "foreign_landing_url": "https://www.rawpixel.com/image/420192/free-illustration-image-pattern-art-deco-patterns-vintage-fabric",
+          "url": "https://images.rawpixel.com/editor_1024/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcGQzMy1qai0wMDA3Ni5qcGc.jpg",
+          "thumbnail": "https://api.openverse.org/v1/images/f7a2c3cb-8948-4688-a6c1-a8a5e1e36bd2/thumb/",
+          "license": "cc0",
+          "license_version": "1.0",
+          "source": "rawpixel",
+          "width": 4528,
+          "height": 4528
+        },
+        {
+          "id": "7c35cc36-06cc-4fa3-ba68-cb9807031c6a",
+          "title": "Vintage woodblock print Japanese textile",
+          "creator": "",
+          "foreign_landing_url": "https://www.rawpixel.com/image/420336/free-illustration-image-pattern-shima-furuya-korin",
+          "url": "https://images.rawpixel.com/editor_1024/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcGQzMy1qai0wNzkuanBn.jpg",
+          "thumbnail": "https://api.openverse.org/v1/images/7c35cc36-06cc-4fa3-ba68-cb9807031c6a/thumb/",
+          "license": "cc0",
+          "license_version": "1.0",
+          "source": "rawpixel",
+          "width": 4098,
+          "height": 4098
+        }
+      ]
+    }
+  }
+}
