@@ -58,3 +58,25 @@ provided by the bot. You will only need to do this once across all repos using o
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
 For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
 contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+
+## API 客户端请求平滑（Qwen3-Coder）
+
+`src/api/rateLimiter.ts` 提供 `RampRateLimiter`：将瞬时涌入的请求整形为随时间
+平稳扩展的发送流，避免请求率爬升过快触发服务端限流（429）。
+
+- **冷启动斜坡**：发射速率从稳态的 25%（`rampStartFraction`）在 `rampDurationMs`
+  内线性爬到 100%，并发额度同步从 `minConcurrent` 爬坡到 `maxConcurrent`；
+- **令牌桶 + 滑动窗口闸门**：双保险限制任意 1s 窗口内的真实发射数；
+- **AIMD 反馈**：收到 429/5xx 时乘性收缩并尊重 `Retry-After`，成功后加性恢复，
+  且恢复重新经历线性爬坡；重试带指数退避与抖动，绝不立即重发。
+
+用法：
+
+```ts
+import { qwenCoderFetch } from './api/rateLimiter';
+
+const res = await qwenCoderFetch('/v1/chat/completions', { method: 'POST', body });
+```
+
+实测：100 个突发请求经默认参数整形后，各 500ms 窗口的发射数为
+4 → 6 → 6 → 9 → 10 → 12 → 12 → 12 → 13（平滑线性爬升，无阶跃尖峰）。
