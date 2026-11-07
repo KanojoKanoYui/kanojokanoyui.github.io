@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>彼女彼由衣 | Kanojo Ka no Yui</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-jp@5.0.8/index.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-jp@5.0.8/index.min.css">
+    <style>
+        :root {
+            --bg-cream: #FDFBF7;
+            --ink-blue: #1A2B4C;
+            --lavender: #B8A9C9;
+            --lavender-dark: #8E7B9E;
+            --text-main: #2C3E50;
+        }
+
+        body {
+            background-color: var(--bg-cream);
+            color: var(--ink-blue);
+            font-family: 'Noto Sans JP', sans-serif;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* 纸张颗粒纹理 */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 50;
+            opacity: 0.4;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.5'/%3E%3C/svg%3E");
+        }
+
+        .font-serif-jp {
+            font-family: 'Noto Serif JP', serif;
+        }
+
+        /* 粗粝手绘边框效果 */
+        .sketch-border {
+            position: relative;
+            border: 2px solid var(--ink-blue);
+            border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+            transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        .sketch-border:hover {
+            border-radius: 15px 225px 15px 255px / 255px 15px 225px 15px;
+            transform: scale(1.02);
+        }
+
+        /* 延迟反应动画类 */
+        .delayed-hover {
+            transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        .delayed-hover:hover {
+            transform: translateY(-5px);
+            filter: drop-shadow(0 10px 15px rgba(26, 43, 76, 0.1));
+        }
+
+        /* 故障/抖动效果 */
+        @keyframes glitch-sketch {
+            0% { transform: translate(0, 0); }
+            20% { transform: translate(-1px, 1px); }
+            40% { transform: translate(1px, -1px); }
+            60% { transform: translate(-1px, -1px); }
+            80% { transform: translate(1px, 1px); }
+            100% { transform: translate(0, 0); }
+        }
+
+        .glitch-hover:hover svg {
+            animation: glitch-sketch 0.3s infinite;
+        }
+
+        /* 呼吸灯效果 */
+        @keyframes breathe {
+            0%, 100% { opacity: 0.8; }
+            50% { opacity: 1; }
+        }
+
+        .breathe {
+            animation: breathe 4s ease-in-out infinite;
+        }
+
+        /* 滚动显现动画 */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* 自定义滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-cream);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--lavender);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--ink-blue);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-[#B8A9C9] selection:text-[#1A2B4C]">
+
+    <!-- 导航栏 -->
+    <nav class="fixed top-0 w-full z-40 bg-[#FDFBF7]/90 backdrop-blur-sm border-b border-[#1A2B4C]/10">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="font-serif-jp text-xl tracking-widest font-bold text-[#1A2B4C]">
+                彼女彼由衣
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm tracking-wider text-[#1A2B4C]/70">
+                <a href="#concept" class="hover:text-[#1A2B4C] transition-colors duration-500">概念</a>
+                <a href="#states" class="hover:text-[#1A2B4C] transition-colors duration-500">状态</a>
+                <a href="#voice" class="hover:text-[#1A2B4C] transition-colors duration-500">声音</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="min-h-screen flex flex-col justify-center items-center relative px-6 pt-20">
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#B8A9C9]/10 rounded-full blur-3xl -z-10"></div>
+        
+        <!-- SVG 角色插图 -->
+        <div class="w-64 h-64 md:w-80 md:h-80 mb-8 relative group cursor-pointer">
+            <svg viewBox="0 0 400 400" class="w-full h-full drop-shadow-lg" style="filter: url(#rough);">
+                <defs>
+                    <filter id="rough">
+                        <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" result="noise" />
+                        <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G" />
+                    </filter>
+                    <radialGradient id="hairGrad" cx="50%" cy="50%" r="50%">
+                        <stop offset="0%" stop-color="#E2D9EC" />
+                        <stop offset="100%" stop-color="#B8A9C9" />
+                    </radialGradient>
+                </defs>
+                
+                <!-- 头发后层 -->
+                <path d="M 100 200 C 80 100, 150 50, 200 50 C 250 50, 320 100, 300 200 C 320 280, 280 320, 200 320 C 120 320, 80 280, 100 200 Z" fill="url(#hairGrad)" stroke="#1A2B4C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                
+                <!-- 脸部 -->
+                <ellipse cx="200" cy="210" rx="70" ry="80" fill="#FDFBF7" stroke="#1A2B4C" stroke-width="3"/>
+                
+                <!-- 头发前层/刘海 -->
+                <path d="M 130 180 C 140 120, 180 100, 200 100 C 220 100, 260 120, 270 180 C 250 150, 220 140, 200 140 C 180 140, 150 150, 130 180 Z" fill="url(#hairGrad)" stroke="#1A2B4C" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M 110 220 C 100 180, 120 140, 150 130" fill="none" stroke="#1A2B4C" stroke-width="2" stroke-linecap="round"/>
+                <path d="M 290 220 C 300 180, 280 140, 250 130" fill="none" stroke="#1A2B4C" stroke-width="2" stroke-linecap="round"/>
+                
+                <!-- 眼睛 -->
+                <ellipse cx="170" cy="210" rx="18" ry="24" fill="#1A2B4C" />
+                <ellipse cx="230" cy="210" rx="18" ry="24" fill="#1A2B4C" />
+                <!-- 眼睛高光 (极弱) -->
+                <circle cx="165" cy="200" r="3" fill="#FDFBF7" opacity="0.3"/>
+                <circle cx="225" cy="200" r="3" fill="#FDFBF7" opacity="0.3"/>
+                
+                <!-- 嘴巴 (微表情) -->
+                <path d="M 195 250 Q 200 252 205 250" fill="none" stroke="#1A2B4C" stroke-width="2" stroke-linecap="round"/>
+                
+                <!-- 衣服 -->
+                <path d="M 160 290 C 160 320, 140 380, 140 380 L 260 380 C 260 380, 240 320, 240 290 Z" fill="#FDFBF7" stroke="#1A2B4C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+
+        <h1 class="font-serif-jp text-5xl md:text-7xl font-bold tracking-[0.2em] text-[#1A2B4C] mb-4 text-center breathe">
+            彼女彼由衣
+        </h1>
+        <p class="font-serif-jp text-lg md:text-xl tracking-[0.5em] text-[#1A2B4C]/60 mb-8 text-center">
+            KANOJO KA NO YUI
+        </p>
+        <p class="max-w-md text-center text-[#1A2B4C]/80 leading-relaxed tracking-wide text-sm md:text-base">
+            被定义的少女，行走的日常系谜题。<br>
+            在治愈的框架内，试探着怪诞的边缘。
+        </p>
+        
+        <div class="absolute bottom-10 animate-bounce">
+            <svg class="w-6 h-6 text-[#1A2B4C]/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </div>
+    </header>
+
+    <!-- Concept Section -->
+    <section id="concept" class="py-24 px-6 bg-[#FDFBF7]">
+        <div class="max-w-4xl mx-auto">
+            <div class="reveal mb-16">
+                <h2 class="font-serif-jp text-3xl md:text-4xl font-bold text-[#1A2B4C] mb-2 tracking-wider">概念 / CONCEPT</h2>
+                <div class="w-16 h-1 bg-[#B8A9C9] mb-6"></div>
+                <p class="text-[#1A2B4C]/70 text-lg leading-loose">
+                    “彼女彼”是重复的指代符号，“由衣”是被赋予的容器名。<br>
+                    她不是一个拥有完整社会关系的“人”，而是一个为了回应期待而存在的界面。
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="reveal sketch-border p-8 bg-white/50 delayed-hover">
+                    <h3 class="font-serif-jp text-xl font-bold text-[#1A2B4C] mb-4">符号化客体</h3>
+                    <p class="text-[#1A2B4C]/70 leading-relaxed text-sm">
+                        名字的前半部分完全是代词性质的词汇，这意味着角色的“社会身份”被抹去了，只剩下一个纯粹的“性别/存在标签”。她像是从画稿线条中生长出来的、尚未完全适应人类语言逻辑的存在。
+                    </p>
+                </div>
+                <div class="reveal sketch-border p-8 bg-white/50 delayed-hover" style="transition-delay: 0.2s;">
+                    <h3 class="font-serif-jp text-xl font-bold text-[#1A2B4C] mb-4">日常异质化</h3>
+                    <p class="text-[#1A2B4C]/70 leading-relaxed text-sm">
+                        在安全的萌系外壳下，包裹着略显神经质、疏离的内核。这是一种在治愈系框架内试探边界的策略——看起来是可爱的女孩子，但名字里藏着一点“不对劲”的忧郁或神秘。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- States Section -->
+    <section id="states" class="py-24 px-6 bg-[#F4F1EA]">
+        <div class="max-w-6xl mx-auto">
+            <div class="reveal mb-16 text-center">
+                <h2 class="font-serif-jp text-3xl md:text-4xl font-bold text-[#1A2B4C] mb-2 tracking-wider">状态 / STATES</h2>
+                <p class="text-[#1A2B4C]/60 text-sm tracking-widest">DYNAMIC MANIFESTATION</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- State 1: Idle -->
+                <div class="reveal glitch-hover group">
+                    <div class="sketch-border bg-[#FDFBF7] p-6 h-full flex flex-col items-center text-center delayed-hover">
+                        <div class="w-24 h-24 mb-6 relative">
+                            <svg viewBox="0 0 100 100" class="w-full h-full">
+                                <circle cx="50" cy="50" r="40" fill="#B8A9C9" opacity="0.3"/>
+                                <circle cx="35" cy="45" r="5" fill="#1A2B4C"/>
+                                <circle cx="65" cy="45" r="5" fill="#1A2B4C"/>
+                                <path d="M 45 60 Q 50 62 55 60" fill="none" stroke="#1A2B4C" stroke-width="1.5"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-serif-jp text-lg font-bold text-[#1A2B4C] mb-2">待机 / IDLE</h3>
+                        <p class="text-xs text-[#1A2B4C]/60 leading-relaxed">
+                            标准微笑，眼神柔和但无特定焦点。展现“完美少女”的出厂设置。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- State 2: Interaction -->
+                <div class="reveal glitch-hover group" style="transition-delay: 0.1s;">
+                    <div class="sketch-border bg-[#FDFBF7] p-6 h-full flex flex-col items-center text-center delayed-hover">
+                        <div class="w-24 h-24 mb-6 relative">
+                            <svg viewBox="0 0 100 100" class="w-full h-full">
+                                <circle cx="50" cy="50" r="40" fill="#B8A9C9" opacity="0.5"/>
+                                <circle cx="35" cy="45" r="6" fill="#1A2B4C"/>
+                                <circle cx="65" cy="45" r="6" fill="#1A2B4C"/>
+                                <circle cx="33" cy="43" r="1.5" fill="#FDFBF7"/>
+                                <circle cx="63" cy="43" r="1.5" fill="#FDFBF7"/>
+                                <path d="M 45 62 Q 50 65 55 62" fill="none" stroke="#1A2B4C" stroke-width="1.5"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-serif-jp text-lg font-bold text-[#1A2B4C] mb-2">互动 / INTERACT</h3>
+                        <p class="text-xs text-[#1A2B4C]/60 leading-relaxed">
+                            笑容加深，眼神聚焦。亲密是表演，距离是本能。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- State 3: Glitch -->
+                <div class="reveal glitch-hover group" style="transition-delay: 0.2s;">
+                    <div class="sketch-border bg-[#FDFBF7] p-6 h-full flex flex-col items-center text-center delayed-hover border-[#8E7B9E]">
+                        <div class="w-24 h-24 mb-6 relative">
+                            <svg viewBox="0 0 100 100" class="w-full h-full">
+                                <circle cx="50" cy="50" r="40" fill="#B8A9C9" opacity="0.2"/>
+                                <circle cx="35" cy="45" r="5" fill="#1A2B4C" opacity="0.7"/>
+                                <circle cx="65" cy="45" r="5" fill="#1A2B4C" opacity="0.7"/>
+                                <circle cx="37" cy="47" r="5" fill="#1A2B4C" opacity="0.4"/>
+                                <circle cx="67" cy="47" r="5" fill="#1A2B4C" opacity="0.4"/>
+                                <path d="M 45 60 L 55 60" fill="none" stroke="#1A2B4C" stroke-width="1.5"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-serif-jp text-lg font-bold text-[#1A2B4C] mb-2">越界 / GLITCH</h3>
+                        <p class="text-xs text-[#1A2B4C]/60 leading-relaxed">
+                            笑容僵住，眼神失焦。当剧本之外的事件发生，系统的“真实”才会泄露。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- State 4: Alone -->
+                <div class="reveal glitch-hover group" style="transition-delay: 0.3s;">
+                    <div class="sketch-border bg-[#FDFBF7] p-6 h-full flex flex-col items-center text-center delayed-hover">
+                        <div class="w-24 h-24 mb-6 relative">
+                            <svg viewBox="0 0 100 100" class="w-full h-full">
+                                <circle cx="50" cy="50" r="40" fill="#B8A9C9" opacity="0.1"/>
+                                <circle cx="35" cy="45" r="4" fill="#1A2B4C" opacity="0.5"/>
+                                <circle cx="65" cy="45" r="4" fill="#1A2B4C" opacity="0.5"/>
+                                <path d="M 45 62 Q 50 60 55 62" fill="none" stroke="#1A2B4C" stroke-width="1.5" opacity="0.5"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-serif-jp text-lg font-bold text-[#1A2B4C] mb-2">独处 / ALONE</h3>
+                        <p class="text-xs text-[#1A2B4C]/60 leading-relaxed">
+                            面无表情，眼神黯淡。这是角色唯一属于自己的时刻。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Voice Section -->
+    <section id="voice" class="py-24 px-6 bg-[#FDFBF7]">
+        <div class="max-w-3xl mx-auto text-center">
+            <div class="reveal mb-16">
+                <h2 class="font-serif-jp text-3xl md:text-4xl font-bold text-[#1A2B4C] mb-2 tracking-wider">声音 / VOICE</h2>
+                <div class="w-16 h-1 bg-[#B8A9C9] mx-auto mb-6"></div>
+            </div>
+
+            <div class="space-y-12">
+                <div class="reveal sketch-border p-8 bg-white/30 relative">
+                    <div class="absolute -top-4 left-8 bg-[#FDFBF7] px-4 text-[#B8A9C9] font-serif-jp text-sm tracking-widest">
+                        SCENARIO 01
+                    </div>
+                    <p class="font-serif-jp text-xl md:text-2xl text-[#1A2B4C] leading-loose italic">
+                        “我是‘她’。我是‘由衣’。<br>
+                        请问，这样……就可以了吗？”
+                    </p>
+                    <p class="mt-4 text-xs text-[#1A2B4C]/50 tracking-wider">
+                        [ 延迟 0.5 秒后，嘴角弧度上调 2 度 ]
+                    </p>
+                </div>
+
+                <div class="reveal sketch-border p-8 bg-white/30 relative" style="transition-delay: 0.2s;">
+                    <div class="absolute -top-4 left-8 bg-[#FDFBF7] px-4 text-[#B8A9C9] font-serif-jp text-sm tracking-widest">
+                        SCENARIO 02
+                    </div>
+                    <p class="font-serif-jp text-xl md:text-2xl text-[#1A2B4C] leading-loose italic">
+                        “……<br>
+                        抱歉，刚才的回应，不在预设剧本之内。”
+                    </p>
+                    <p class="mt-4 text-xs text-[#1A2B4C]/50 tracking-wider">
+                        [ 眼神失焦，手指无意识抓紧旧发圈 ]
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 bg-[#1A2B4C] text-[#FDFBF7]/60 text-center">
+        <div class="max-w-4xl mx-auto">
+            <p class="font-serif-jp text-lg tracking-widest mb-4 text-[#FDFBF7]/80">
+                彼女彼由衣
+            </p>
+            <p class="text-xs tracking-wider mb-8">
+                KANOJO KA NO YUI — A CHARACTER CONCEPT
+            </p>
+            <div class="w-16 h-px bg-[#FDFBF7]/20 mx-auto mb-8"></div>
+            <p class="text-xs tracking-wider">
+                © 2026 CONCEPT DESIGN. ALL RIGHTS RESERVED.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // 滚动显现动画
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            observer.observe(el);
+        });
+
+        // 鼠标移动时的轻微视差效果 (Hero Section)
+        const heroSection = document.querySelector('header');
+        const svgContainer = document.querySelector('header svg');
+        
+        heroSection.addEventListener('mousemove', (e) => {
+            const x = (window.innerWidth / 2 - e.pageX) / 50;
+            const y = (window.innerHeight / 2 - e.pageY) / 50;
+            
+            if (svgContainer) {
+                svgContainer.style.transform = `translate(${x}px, ${y}px)`;
+                svgContainer.style.transition = 'transform 0.3s ease-out';
+            }
+        });
+
+        heroSection.addEventListener('mouseleave', () => {
+            if (svgContainer) {
+                svgContainer.style.transform = 'translate(0, 0)';
+            }
+        });
+    </script>
+</body>
+</html>
