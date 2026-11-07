@@ -5,7 +5,7 @@
 ## 当前目录
 
 - `asset-credits.csv`：外部素材登记表模板。
-- `../assets/`：站点图片资源；目前已有的 `yui-portrait.svg`、`yui-scene.svg`、`yui-window.svg` 和 `favicon.svg` 是本仓库内创作的原创 SVG，不是从 Pixiv 等平台下载的素材。
+- `../assets/`：站点图片资源；目前已有的 `yui-portrait.svg`、`yui-scene.svg`、`yui-window.svg`、`yui-lease.svg`、`yui-swap.svg` 和 `favicon.svg` 是本仓库内创作的原创 SVG，不是从 Pixiv 等平台下载的素材。其中 `yui-lease.svg`（租借契约场景）与 `yui-swap.svg`（身份改写场景）受《彼女、お借りします》《お兄ちゃんはおしまい！》的**题材氛围启发**而原创绘制，未复制任何上述作品的美术资产、角色设计或商标图形。
 
 ## 候选检索入口
 
