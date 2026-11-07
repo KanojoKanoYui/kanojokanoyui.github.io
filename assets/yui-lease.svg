@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 680" role="img" aria-labelledby="title desc">
+  <title id="title">借来的午后与退还的微笑</title>
+  <desc id="desc">朱红色的租借契约场景：长发少女站在门内递出叠好的水手领制服，门外的少年手持收据，四角是登记用的版面标记。</desc>
+  <defs>
+    <linearGradient id="leaseWall" x2="0" y2="1"><stop stop-color="#f0e7da"/><stop offset="1" stop-color="#dccdbb"/></linearGradient>
+    <linearGradient id="leaseDoor" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#bb574b"/><stop offset="1" stop-color="#9c4a40"/></linearGradient>
+    <linearGradient id="leaseHair" x1=".2" y1="0" x2=".8" y2="1"><stop stop-color="#e4ddeb"/><stop offset=".55" stop-color="#b9aecb"/><stop offset="1" stop-color="#9389a9"/></linearGradient>
+    <pattern id="leaseDots" width="18" height="18" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#202844" opacity=".14"/></pattern>
+    <filter id="leasePaper" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency=".02" numOctaves="2" seed="7" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.2"/></filter>
+  </defs>
+  <!-- 墙面与地面 -->
+  <rect width="960" height="680" fill="url(#leaseWall)"/>
+  <path d="M0 560h960v120H0z" fill="#cbb9a6"/>
+  <path d="M0 560h960" stroke="#202844" stroke-width="4"/>
+  <rect width="960" height="680" fill="url(#leaseDots)" opacity=".5"/>
+  <!-- 半开的门（朱红）与门内的夜色 -->
+  <path d="M560 70h300v490H560z" fill="#202844" opacity=".9"/>
+  <path d="M560 70L410 128v452l150-20z" fill="url(#leaseDoor)" stroke="#202844" stroke-width="5"/>
+  <path d="M440 176l96-26v392l-96 14z" fill="none" stroke="#f4f0e8" stroke-width="3" opacity=".5"/>
+  <circle cx="536" cy="346" r="9" fill="#f4f0e8" stroke="#202844" stroke-width="3"/>
+  <!-- 墙上的租借告示牌 -->
+  <path d="M96 116h250v150H96z" fill="#f4f0e8" stroke="#202844" stroke-width="4"/>
+  <path d="M118 152h206m-206 30h158m-158 30h186" stroke="#bb574b" stroke-width="4"/>
+  <path d="M96 116l125-44 125 44" fill="#bb574b" stroke="#202844" stroke-width="4"/>
+  <!-- 少女：由衣，交还制服的一侧 -->
+  <g filter="url(#leasePaper)" stroke="#202844" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M212 352c-26-64-10-138 32-160 46-24 106-8 122 40 12 38 4 76-12 104l14 106-44 48H240l-34-52z" fill="url(#leaseHair)" stroke-width="4"/>
+    <path d="M252 420c14-28 40-44 76-44s62 16 76 44l30 100H222z" fill="#313a5c" stroke-width="4"/>
+    <path d="M292 392l36 38 36-38 24 22-22 96h-76l-22-96z" fill="#f4f0e8" stroke-width="3"/>
+    <path d="M324 430l10 8 10-8-6 30h-8z" fill="#bb574b" stroke-width="2"/>
+    <path d="M272 300c0-46 20-74 52-74 34 0 54 28 50 78l-4 42c-4 28-24 50-46 50-25 0-46-22-50-52z" fill="#f0d7ca" stroke-width="3.5"/>
+    <path d="M268 306c-8-34 0-70 20-88 20-16 54-14 72 8 18 20 18 52 10 82-9-7-15-20-16-33-12 15-30 24-50 24 3-10 4-17 3-24-9 18-23 30-39 31z" fill="url(#leaseHair)" stroke-width="4"/>
+    <path d="M286 330q12-10 24 0m18 0q12-10 24 0" fill="none" stroke="#202844" stroke-width="3.5"/>
+    <ellipse cx="299" cy="337" rx="4" ry="6" fill="#313653" stroke="none"/><ellipse cx="341" cy="337" rx="4" ry="6" fill="#313653" stroke="none"/>
+    <path d="M316 348l-2 12 4 1m-7 13q6 3 12-1" fill="none" stroke="#a47776" stroke-width="2"/>
+    <path d="M362 262l8-9 9 9-9 9z" fill="#bb574b" stroke-width="2"/>
+    <!-- 伸出的手臂：递出叠好的制服 -->
+    <path d="M398 448l84-14 10 20-84 16z" fill="#313a5c" stroke-width="3"/>
+    <path d="M470 424h58v46h-58z" fill="#aaa0bd" stroke-width="3"/>
+    <path d="M470 436h58m-52 12h52" stroke="#f4f0e8" stroke-width="3"/>
+    <circle cx="486" cy="452" r="5" fill="#bb574b" stroke-width="2"/>
+  </g>
+  <!-- 少年：接过收据的一侧（剪影式） -->
+  <g stroke="#202844" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M620 402c-14-34 4-70 38-76 34-6 62 18 62 52l-2 40c-2 26-22 44-46 44s-46-18-50-44z" fill="#515979" stroke-width="4"/>
+    <path d="M640 470c10-20 30-32 56-32s46 12 56 32l24 90H616z" fill="#283250" stroke-width="4"/>
+    <path d="M596 512l70-16 8 22-70 18z" fill="#283250" stroke-width="3"/>
+    <path d="M662 496h56v40h-56z" fill="#f4f0e8" stroke-width="3"/>
+    <path d="M672 508h36m-36 12h28" stroke="#bb574b" stroke-width="3"/>
+  </g>
+  <!-- 悬浮的“租期”印章 -->
+  <g transform="rotate(-12 700 200)" stroke="#bb574b" fill="none">
+    <rect x="620" y="150" width="160" height="96" stroke-width="5"/>
+    <path d="M648 182h104m-104 24h78m-78 24h92" stroke-width="4"/>
+    <circle cx="756" cy="176" r="10" stroke-width="3"/>
+  </g>
+  <!-- 版面标记 -->
+  <path d="M60 620h46M83 597v46M876 96h44M898 74v44" stroke="#bb574b" stroke-width="1.5" opacity=".85"/>
+  <circle cx="900" cy="600" r="4" fill="#bb574b"/><path d="M900 612v30" stroke="#bb574b"/>
+</svg>
