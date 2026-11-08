@@ -1,34 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 680" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 680" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="title desc">
   <title id="title">窗边的夜间观察记录</title>
-  <desc id="desc">淡紫色夜晚里，长发少女坐在窗前，月光落在桌上的笔记本与茶杯旁。</desc>
+  <desc id="desc">由衣坐在月光照亮的窗边，桌上放着笔记本和茶杯。</desc>
   <defs>
-    <linearGradient id="wall" x2="0" y2="1"><stop stop-color="#e7e0eb"/><stop offset="1" stop-color="#c9c0d2"/></linearGradient>
-    <linearGradient id="night" x2="0" y2="1"><stop stop-color="#515979"/><stop offset="1" stop-color="#202844"/></linearGradient>
-    <linearGradient id="light" x2="1" y2="1"><stop stop-color="#f4f0e8" stop-opacity=".68"/><stop offset="1" stop-color="#f4f0e8" stop-opacity="0"/></linearGradient>
-    <pattern id="grain" width="7" height="7" patternUnits="userSpaceOnUse"><circle cx="1" cy="2" r=".65" fill="#202844" opacity=".13"/></pattern>
+    <linearGradient id="room" x2="0" y2="1"><stop stop-color="#e8e1eb"/><stop offset="1" stop-color="#c9c1d3"/></linearGradient>
+    <linearGradient id="night" x2="0" y2="1"><stop stop-color="#59627f"/><stop offset="1" stop-color="#222a46"/></linearGradient>
+    <linearGradient id="hair" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e4ddeb"/><stop offset="1" stop-color="#9c91b1"/></linearGradient>
+    <linearGradient id="ray" x2="0" y2="1"><stop stop-color="#fff5dc" stop-opacity=".45"/><stop offset="1" stop-color="#fff5dc" stop-opacity="0"/></linearGradient>
   </defs>
-  <rect width="960" height="680" fill="url(#wall)"/>
-  <rect x="505" y="64" width="365" height="365" fill="#202844" opacity=".12"/>
-  <rect x="525" y="44" width="365" height="365" fill="url(#night)" stroke="#202844" stroke-width="5"/>
-  <path d="M707 44v365M525 226h365" stroke="#d8d0df" stroke-width="9" opacity=".9"/>
-  <circle cx="783" cy="121" r="49" fill="#f4f0e8" opacity=".9"/>
-  <circle cx="800" cy="109" r="48" fill="#515979"/>
-  <g fill="#f4f0e8" opacity=".8"><circle cx="600" cy="123" r="2"/><circle cx="848" cy="178" r="2.5"/><circle cx="643" cy="188" r="1.7"/><circle cx="832" cy="82" r="1.6"/><circle cx="563" cy="288" r="2"/></g>
-  <path d="M525 366c58-69 106-45 153-11 38-42 94-56 212-10v64H525z" fill="#827895"/>
-  <path d="M70 522h824v158H70z" fill="#b7a9b5" stroke="#202844" stroke-width="4"/>
-  <path d="M70 522h824v25H70z" fill="#d9c8bd" stroke="#202844" stroke-width="4"/>
-  <path d="M584 411c16-65 60-113 123-118 46-4 77 25 86 76l9 155H539z" fill="#283250" stroke="#202844" stroke-width="5"/>
-  <path d="M637 309c-22-29-15-93 17-125 33-33 91-25 112 13 18 34 8 81-10 110-23 37-77 42-119 2z" fill="#c9b8cb" stroke="#202844" stroke-width="4"/>
-  <path d="M637 294c-31-56-9-117 21-140 32-24 82-23 106 5 15 18 17 45 12 70-18-17-33-30-55-39-21 39-48 61-84 70z" fill="#aaa0bd" stroke="#202844" stroke-width="4"/>
-  <path d="M657 303q21-16 42 0m21 0q20-15 40 0" fill="none" stroke="#202844" stroke-width="4" stroke-linecap="round"/>
-  <path d="M694 337q12 4 22-1" fill="none" stroke="#986f76" stroke-width="2"/>
-  <path d="M670 391l52 48 53-48 39 39-34 95H650l-28-95z" fill="#e9e2d5" stroke="#202844" stroke-width="4"/>
-  <path d="M655 522l31-88 36 34-28 54m82 0-27-54 34-34 30 88" fill="#aaa0bd" stroke="#202844" stroke-width="3"/>
-  <path d="M375 485h142v37H375z" fill="#eee8dc" stroke="#202844" stroke-width="3"/>
-  <path d="M390 472h114v84H390z" fill="#f4f0e8" stroke="#202844" stroke-width="3" transform="rotate(-4 447 514)"/>
-  <path d="M408 495h70m-68 14h58m-55 14h64" stroke="#aaa0bd" stroke-width="2"/>
-  <path d="M316 520c0-22 13-38 31-38s31 16 31 38v25h-62z" fill="#d9c8bd" stroke="#202844" stroke-width="3"/>
-  <path d="M311 520h72" stroke="#202844" stroke-width="4"/><path d="M327 477q20-9 40 0" fill="none" stroke="#f4f0e8" stroke-width="3" opacity=".8"/>
-  <path d="M106 100h47M129 77v47M826 568h43M847 547v43" stroke="#bb574b" stroke-width="2"/>
-  <rect width="960" height="680" fill="url(#grain)" opacity=".6"/>
+  <rect width="960" height="680" fill="url(#room)"/>
+  <rect x="532" y="46" width="354" height="378" rx="4" fill="#b2a9bc" opacity=".35"/>
+  <rect x="516" y="34" width="354" height="378" fill="url(#night)" stroke="#343b58" stroke-width="8"/>
+  <path d="M693 38v370M520 222h346" stroke="#d7d0df" stroke-width="10"/>
+  <circle cx="770" cy="112" r="44" fill="#f4eddd"/>
+  <circle cx="789" cy="99" r="41" fill="#59627f"/>
+  <g fill="#f5f0e9" opacity=".9"><circle cx="584" cy="114" r="3"/><circle cx="833" cy="160" r="2.5"/><circle cx="632" cy="185" r="2"/><circle cx="817" cy="75" r="2"/><circle cx="555" cy="282" r="2"/><circle cx="740" cy="273" r="2"/></g>
+  <path d="M516 365c64-64 111-47 156-12 45-43 103-53 198-8v67H516z" fill="#827991"/>
+  <path d="M516 358l178 56 176-60v68H516z" fill="url(#ray)" opacity=".8"/>
+  <path d="M70 518h824v162H70z" fill="#b7a9b5" stroke="#343b58" stroke-width="4"/>
+  <path d="M70 518h824v27H70z" fill="#dfd0c5" stroke="#343b58" stroke-width="4"/>
+  <!-- Yui seated at the desk -->
+  <path d="M566 421c13-70 51-116 113-123 53-6 88 26 96 83l8 137H532z" fill="#303955" stroke="#343b58" stroke-width="5"/>
+  <path d="M620 314c-20-32-12-94 19-126 31-31 86-27 108 9 20 32 10 79-9 111-22 37-77 43-118 6z" fill="#f0d7ca" stroke="#45445d" stroke-width="4"/>
+  <path d="M615 305c-26-52-10-113 22-143 33-30 83-27 108 4 15 18 18 45 11 69-19-17-35-30-55-39-22 38-48 60-83 70z" fill="url(#hair)" stroke="#45445d" stroke-width="4"/>
+  <path d="M638 313q20-15 40 0m20 0q20-15 40 0" fill="none" stroke="#34364e" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="658" cy="321" rx="5" ry="8" fill="#414361"/><ellipse cx="718" cy="321" rx="5" ry="8" fill="#414361"/>
+  <path d="M683 335l-2 12 5 1m-9 15q8 3 16-1" fill="none" stroke="#a47776" stroke-width="2" stroke-linecap="round"/>
+  <path d="M643 382l47 44 49-44 35 35-30 101h-111l-28-101z" fill="#eee8dc" stroke="#343b58" stroke-width="4"/>
+  <path d="M628 518l30-88 32 35-27 53m79 0-27-53 32-35 30 88" fill="#aaa0bd" stroke="#343b58" stroke-width="3"/>
+  <!-- open notebook -->
+  <path d="M377 470l146-12 9 75-147 13z" fill="#d7c9bc" opacity=".5"/>
+  <path d="M368 455l147-12 10 76-148 13z" fill="#fbf7ef" stroke="#343b58" stroke-width="3"/>
+  <path d="M382 473l54-5m-51 17 57-5m-53 17 44-4m28-31 50-4m-47 17 51-4m-48 16 41-3" fill="none" stroke="#aaa0bd" stroke-width="2" stroke-linecap="round"/>
+  <path d="M282 518c0-24 14-40 33-40s33 16 33 40v27h-66z" fill="#e2d2c4" stroke="#343b58" stroke-width="3"/><path d="M276 518h78" stroke="#343b58" stroke-width="4"/>
+  <path d="M106 100h44m-22-22v44M816 568h42m-21-21v42" fill="none" stroke="#b95d4d" stroke-width="2"/>
 </svg>
