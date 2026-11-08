@@ -1,38 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 680" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="title desc">
-  <title id="title">由衣的肖像</title>
-  <desc id="desc">淡紫色长发的少女穿着深蓝水手领制服，神情安静。</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 680" role="img" aria-labelledby="title desc">
+  <title id="title">由衣的手绘肖像</title><desc id="desc">淡紫色长发的少女，身穿深蓝水手领制服，胸前系着一枚小小的朱红色发饰。</desc>
   <defs>
-    <linearGradient id="bg" x2="0" y2="1"><stop stop-color="#f3e8e3"/><stop offset="1" stop-color="#e4dbe8"/></linearGradient>
-    <linearGradient id="hair" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e8dfed"/><stop offset=".52" stop-color="#b9aecb"/><stop offset="1" stop-color="#9286a7"/></linearGradient>
-    <linearGradient id="uniform" x2="0" y2="1"><stop stop-color="#414969"/><stop offset="1" stop-color="#202944"/></linearGradient>
-    <radialGradient id="cheek"><stop stop-color="#df9e9d" stop-opacity=".42"/><stop offset="1" stop-color="#df9e9d" stop-opacity="0"/></radialGradient>
+    <linearGradient id="hair" x1=".2" y1="0" x2=".8" y2="1"><stop stop-color="#e4ddeb"/><stop offset=".55" stop-color="#b9aecb"/><stop offset="1" stop-color="#9389a9"/></linearGradient>
+    <linearGradient id="dress" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#313a5c"/><stop offset="1" stop-color="#1d2745"/></linearGradient>
+    <filter id="paper" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency=".018" numOctaves="2" seed="12" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.2"/></filter>
+    <pattern id="dots" width="18" height="18" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#202844" opacity=".16"/></pattern>
   </defs>
-  <rect width="600" height="680" rx="24" fill="url(#bg)"/>
-  <circle cx="300" cy="292" r="220" fill="#f8f2ed" opacity=".62"/>
-  <circle cx="300" cy="292" r="191" fill="none" stroke="#b7a9c5" stroke-width="1.5" opacity=".6"/>
-  <path d="M68 612c35-114 117-174 232-174s197 60 232 174v68H68z" fill="#d5c8d9" opacity=".46"/>
-  <!-- Hair silhouette and long side locks -->
-  <path d="M164 331c-18-117-6-222 59-272 42-32 119-42 181-12 75 37 96 119 73 239l28 190c9 59 30 104 56 145-76-9-124-56-139-133l-21-115H205l-23 120c-14 70-52 112-116 128 33-49 48-97 49-157z" fill="url(#hair)" stroke="#45445d" stroke-width="4" stroke-linejoin="round"/>
-  <!-- shoulders and uniform -->
-  <path d="M142 680c8-105 34-167 94-202 31-18 55-25 64-26h1c9 1 34 8 64 26 60 35 86 97 94 202z" fill="url(#uniform)" stroke="#343b58" stroke-width="4"/>
-  <path d="M233 464l67 75 67-75 45 39-48 177H236l-48-177z" fill="#f5eee7" stroke="#343b58" stroke-width="3.5" stroke-linejoin="round"/>
-  <path d="M233 464l67 75-36 45-52-80zm134 0-67 75 36 45 52-80z" fill="#aaa0bd" stroke="#343b58" stroke-width="2.5"/>
-  <path d="M284 538l16 13 16-13-8 57h-16z" fill="#b95d4d" stroke="#343b58" stroke-width="2"/>
-  <circle cx="300" cy="553" r="4" fill="#f5eee7"/>
-  <!-- neck and face -->
-  <path d="M267 403v73c17 20 49 20 66 0v-73" fill="#e8c9bd" stroke="#45445d" stroke-width="3"/>
-  <path d="M209 279c0-91 35-151 91-151 62 0 99 57 94 153l-6 79c-5 67-45 117-89 117s-84-50-89-117z" fill="#f1d9cd" stroke="#45445d" stroke-width="3.5"/>
-  <!-- ears -->
-  <path d="M211 302c-29-12-39 14-24 43 7 14 17 20 28 18m174-61c29-12 39 14 24 43-7 14-17 20-28 18" fill="#edcfc3" stroke="#45445d" stroke-width="3"/>
-  <!-- fringe -->
-  <path d="M201 294c-12-72 1-137 43-176 39-36 107-38 148 2 38 38 39 98 21 164-19-13-32-37-35-65-25 30-58 47-98 48 7-20 8-35 5-49-18 36-45 62-84 76z" fill="url(#hair)" stroke="#45445d" stroke-width="4" stroke-linejoin="round"/>
-  <path d="M220 282c22-17 39-38 51-65m13 43c19-20 31-45 37-69m16 62c22-18 38-42 47-68m5 100c12-17 19-34 21-52" fill="none" stroke="#887d9b" stroke-width="2.5" stroke-linecap="round" opacity=".75"/>
-  <!-- expression -->
-  <path d="M239 333q23-18 47 0m31 0q24-18 48 0" fill="none" stroke="#34364e" stroke-width="4" stroke-linecap="round"/>
-  <ellipse cx="263" cy="344" rx="7" ry="10" fill="#414361"/><ellipse cx="341" cy="344" rx="7" ry="10" fill="#414361"/>
-  <circle cx="261" cy="340" r="2.2" fill="#fffaf4"/><circle cx="339" cy="340" r="2.2" fill="#fffaf4"/>
-  <ellipse cx="245" cy="374" rx="24" ry="12" fill="url(#cheek)"/><ellipse cx="359" cy="374" rx="24" ry="12" fill="url(#cheek)"/>
-  <path d="M300 352l-3 19 7 1m-13 22q10 4 20 0" fill="none" stroke="#a47776" stroke-width="2.3" stroke-linecap="round"/>
-  <path d="M394 230l13-15 13 15-13 15z" fill="#b95d4d" stroke="#45445d" stroke-width="2.5"/><circle cx="407" cy="230" r="3" fill="#fff4e8"/>
-  <path d="M78 104h42m-21-21v42M480 572h42m-21-21v42" fill="none" stroke="#b95d4d" stroke-width="2" opacity=".8"/>
+  <!-- 印刷版画式的背景光环 -->
+  <circle cx="305" cy="315" r="236" fill="#e5dfeb" opacity=".55"/>
+  <circle cx="305" cy="315" r="208" fill="none" stroke="#aaa0bd" stroke-width="1" stroke-dasharray="2 7"/>
+  <path d="M92 468c22-99 94-152 207-152s187 51 210 152v122H92z" fill="url(#dots)" opacity=".7"/>
+  <g filter="url(#paper)" stroke="#202844" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M170 300c-41-91-22-197 29-236C245 24 372 38 421 90c47 51 48 124 17 211l25 181-73 83H205l-54-87z" fill="url(#hair)" stroke-width="4"/>
+    <path d="M176 263c-24 112-3 190-31 281-10 33-29 54-41 73 58-12 98-59 110-123l7-229zm245-8c31 101 14 183 49 273 11 28 27 48 43 65-61-8-105-49-119-114l-22-218z" fill="#b3a8c2" stroke-width="3"/>
+    <path d="M174 492c26-42 71-66 128-66s103 24 128 66l51 155H121z" fill="url(#dress)" stroke-width="4"/>
+    <path d="M236 438l67 69 67-69 42 39-41 170H233l-40-170z" fill="#f4f0e8" stroke-width="3"/>
+    <path d="M235 438l68 69-35 42-49-94zm135 0-67 69 35 42 48-94z" fill="#aaa0bd" stroke-width="2"/>
+    <path d="M284 509l19 15 18-15-10 54h-18z" fill="#bb574b" stroke-width="2"/>
+    <circle cx="304" cy="525" r="4" fill="#f4f0e8" stroke="none"/>
+    <path d="M270 407v57c16 19 48 19 65 0v-62" fill="#e7c9bd" stroke-width="3"/>
+    <path d="M208 267c0-91 39-146 99-146 65 0 103 55 96 151l-9 85c-7 55-47 99-88 99-47 0-87-43-93-101z" fill="#f0d7ca" stroke-width="3.5"/>
+    <path d="M211 294c-30-13-40 15-24 47 8 16 18 20 29 18m177-65c30-13 40 15 24 47-8 16-18 20-29 18" fill="#efcfc3" stroke-width="3"/>
+    <path d="M202 281c-17-68-2-138 40-175 38-34 105-31 143 7 39 40 39 101 24 162-17-14-29-39-32-66-24 30-58 48-97 48 6-20 8-34 6-48-18 36-45 60-84 72z" fill="url(#hair)" stroke-width="4"/>
+    <path d="M218 273c21-15 38-35 50-60m13 34c19-20 31-44 37-68m16 62c22-18 37-40 46-66m6 100c13-17 19-33 22-50" fill="none" stroke="#8f859f" stroke-width="2" opacity=".72"/>
+    <path d="M238 326q23-20 47-1m35 0q25-20 49 0" fill="none" stroke="#202844" stroke-width="4"/>
+    <ellipse cx="263" cy="337" rx="7" ry="11" fill="#313653" stroke="none"/><ellipse cx="344" cy="337" rx="7" ry="11" fill="#313653" stroke="none"/>
+    <circle cx="261" cy="333" r="2.2" fill="#f4f0e8" stroke="none"/><circle cx="342" cy="333" r="2.2" fill="#f4f0e8" stroke="none"/>
+    <path d="M301 346l-3 22 7 1m-13 23q11 4 21-1" fill="none" stroke="#a47776" stroke-width="2.2"/>
+    <path d="M232 370q13 6 22 0m100 0q13 6 22 0" fill="none" stroke="#d99b9b" stroke-width="3" opacity=".55"/>
+    <path d="M392 226l14-16 14 16-14 16z" fill="#bb574b" stroke-width="2"/><circle cx="406" cy="226" r="3" fill="#f4f0e8" stroke="none"/>
+    <path d="M159 495c18-21 29-47 34-76m251 77c-18-22-27-48-31-77" fill="none" stroke="#e7dfeb" stroke-width="3" opacity=".7"/>
+  </g>
+  <path d="M65 114h46M88 91v46M486 548h48M510 524v48" stroke="#bb574b" stroke-width="1.5" opacity=".8"/>
+  <circle cx="83" cy="560" r="4" fill="#bb574b"/><path d="M83 572v34" stroke="#bb574b"/>
 </svg>

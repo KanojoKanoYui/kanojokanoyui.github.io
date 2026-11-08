@@ -1,46 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 680" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 680" role="img" aria-labelledby="title desc">
   <title id="title">变成欧尼酱之后的房间</title>
-  <desc id="desc">柔和色调的卧室里，长发少女抱着旧帽子坐在床边，门外有人探看。</desc>
+  <desc id="desc">糖果色的房间里，长发少女抱着旧帽子坐在床沿；门缝外，穿白大褂的身影比出手势，墙上的日历被红笔圈住。</desc>
   <defs>
-    <linearGradient id="wall" x2="0" y2="1"><stop stop-color="#f4e8ec"/><stop offset="1" stop-color="#e6d5e0"/></linearGradient>
-    <linearGradient id="hair" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e7ddec"/><stop offset=".55" stop-color="#b6a9c4"/><stop offset="1" stop-color="#9186a4"/></linearGradient>
-    <linearGradient id="blanket" x2="0" y2="1"><stop stop-color="#fff7ed"/><stop offset="1" stop-color="#e8d5d0"/></linearGradient>
-    <linearGradient id="doorway" x2="0" y2="1"><stop stop-color="#454b68"/><stop offset="1" stop-color="#252d48"/></linearGradient>
+    <linearGradient id="candyWall" x2="0" y2="1"><stop stop-color="#f7e6ee"/><stop offset="1" stop-color="#ead4e2"/></linearGradient>
+    <linearGradient id="candyHair" x1=".1" y1="0" x2=".9" y2="1"><stop stop-color="#f5b8cf"/><stop offset=".5" stop-color="#d98cb4"/><stop offset="1" stop-color="#b06a9a"/></linearGradient>
+    <linearGradient id="candyBed" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff6ea"/><stop offset="1" stop-color="#f2dfc9"/></linearGradient>
+    <pattern id="candyStripes" width="26" height="26" patternUnits="userSpaceOnUse" patternTransform="rotate(8)"><rect width="26" height="26" fill="none"/><path d="M0 13h26" stroke="#bb574b" stroke-width="3" opacity=".14"/></pattern>
+    <filter id="candyPaper" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency=".02" numOctaves="2" seed="21" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.2"/></filter>
   </defs>
-  <rect width="960" height="680" fill="url(#wall)"/>
-  <path d="M0 544h960v136H0z" fill="#d5bdb8"/><path d="M0 544h960" stroke="#343b58" stroke-width="4"/>
-  <!-- room details -->
-  <rect x="94" y="95" width="182" height="210" rx="3" fill="#fbf5ed" stroke="#45445d" stroke-width="4"/>
-  <path d="M94 144h182" stroke="#b95d4d" stroke-width="16"/>
-  <path d="M120 181h36m18 0h36m18 0h20M120 218h36m18 0h36m18 0h20M120 255h36m18 0h36m18 0h20" stroke="#b3a5bf" stroke-width="6" stroke-linecap="round"/>
-  <circle cx="235" cy="255" r="17" fill="none" stroke="#b95d4d" stroke-width="4"/>
-  <rect x="680" y="88" width="206" height="456" fill="url(#doorway)"/>
-  <path d="M680 88l-70 26v412l70 18z" fill="#c9afbd" stroke="#45445d" stroke-width="4"/>
-  <circle cx="666" cy="322" r="8" fill="#f5eee7" stroke="#45445d" stroke-width="3"/>
-  <!-- person in the doorway -->
-  <path d="M744 248c-6-24 8-45 31-48 25-3 42 15 40 40l-2 29c-2 19-17 31-35 31s-31-12-35-30z" fill="#f1d9cd" stroke="#45445d" stroke-width="3"/>
-  <path d="M732 301h86l16 243H716z" fill="#f7f3ed" stroke="#45445d" stroke-width="4"/>
-  <path d="M758 302l-14 61m55-61 14 61" fill="none" stroke="#a7a0ad" stroke-width="3"/>
-  <path d="M730 348q-23 10-28 35m126-35q22 10 27 35" fill="none" stroke="#45445d" stroke-width="4" stroke-linecap="round"/>
-  <!-- bed -->
-  <path d="M238 534h362v96H238z" fill="url(#blanket)" stroke="#45445d" stroke-width="4"/>
-  <path d="M238 534h362v20H238z" fill="#c9afbd" stroke="#45445d" stroke-width="3"/>
-  <path d="M262 568q95 30 188 0t130 0v62H262z" fill="#eee2e4"/>
-  <!-- Yui, sitting on the edge -->
-  <path d="M282 350c-32-76-11-162 40-190 56-31 127-13 149 49 16 46 7 94-13 128l17 125-59 70H316l-44-65z" fill="url(#hair)" stroke="#45445d" stroke-width="4"/>
-  <path d="M326 306c0-58 25-91 67-91 44 0 69 34 64 96l-5 51c-5 37-32 64-60 64s-59-28-64-65z" fill="#f1d9cd" stroke="#45445d" stroke-width="3.5"/>
-  <path d="M322 311c-8-44 3-86 29-106 27-19 66-15 88 12 21 26 20 63 10 96-10-8-18-24-20-40-14 18-36 30-59 30 4-12 4-22 2-30-12 20-28 36-50 38z" fill="url(#hair)" stroke="#45445d" stroke-width="4"/>
-  <path d="M349 342q16-12 32 0m24 0q16-12 32 0" fill="none" stroke="#34364e" stroke-width="4" stroke-linecap="round"/>
-  <ellipse cx="366" cy="351" rx="5" ry="8" fill="#55506c"/><ellipse cx="424" cy="351" rx="5" ry="8" fill="#55506c"/>
-  <circle cx="364" cy="348" r="1.8" fill="#fffaf4"/><circle cx="422" cy="348" r="1.8" fill="#fffaf4"/>
-  <path d="M392 363l-2 14 5 1m-9 15q8 4 15-1" fill="none" stroke="#a47776" stroke-width="2" stroke-linecap="round"/>
-  <path d="M300 451c18-32 50-49 94-49s75 17 94 49l18 84H281z" fill="#e8d6e0" stroke="#45445d" stroke-width="4"/>
-  <path d="M328 473q66 24 132 0" fill="none" stroke="#c4aebf" stroke-width="3"/>
-  <!-- old cap held close -->
-  <path d="M359 487c0-20 13-34 33-34s34 14 34 34v12h-67z" fill="#59627d" stroke="#343b58" stroke-width="3"/>
-  <path d="M348 498h91" stroke="#343b58" stroke-width="5" stroke-linecap="round"/>
-  <path d="M375 463q17-9 34 0" fill="none" stroke="#f5eee7" stroke-width="3" opacity=".8"/>
-  <path d="M566 148l7 16 17 2-13 11 4 17-15-9-15 9 4-17-13-11 17-2z" fill="#b95d4d" opacity=".75"/>
-  <circle cx="612" cy="236" r="5" fill="#b95d4d" opacity=".7"/>
-  <path d="M60 620h44m-22-22v44M868 620h42m-21-21v42" fill="none" stroke="#b95d4d" stroke-width="2" opacity=".8"/>
+  <rect width="960" height="680" fill="url(#candyWall)"/><rect width="960" height="680" fill="url(#candyStripes)"/><path d="M0 540h960v140H0z" fill="#e3c6b6"/><path d="M0 540h960" stroke="#202844" stroke-width="4"/>
+  <path d="M690 96h210v444H690z" fill="#202844" opacity=".85"/><path d="M690 96l-70 26v418l70 16z" fill="#caa6b9" stroke="#202844" stroke-width="4"/><circle cx="706" cy="320" r="8" fill="#f4f0e8" stroke="#202844" stroke-width="3"/>
+  <g stroke="#202844" stroke-linecap="round" stroke-linejoin="round"><path d="M742 250c-6-24 8-46 32-48s40 16 40 40l-2 30c-2 18-16 30-34 30s-32-12-36-30z" fill="#f4f0e8" stroke-width="4"/><path d="M734 302h84l16 238h-116z" fill="#fff" stroke-width="4"/><path d="M762 302l-14 60m52-60l14 60" fill="none" stroke-width="3"/><path d="M730 348q-22 10-26 34m130-34q22 10 26 34" fill="none" stroke-width="4"/><path d="M770 228q6-14 20-10" fill="none" stroke-width="3"/></g>
+  <g stroke="#202844"><path d="M110 110h180v140H110z" fill="#f4f0e8" stroke-width="4"/><path d="M110 110h180v34H110z" fill="#bb574b" stroke-width="3"/><path d="M132 172h28m44 0h28m44 0h14m-168 34h28m44 0h28m44 0h14" stroke="#aaa0bd" stroke-width="6"/><circle cx="248" cy="206" r="20" fill="none" stroke="#bb574b" stroke-width="4"/></g>
+  <g filter="url(#candyPaper)" stroke="#202844" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M282 340c-34-78-12-168 40-196 58-32 132-12 152 52 14 48 6 96-14 132l18 122-60 62H316l-44-64z" fill="url(#candyHair)" stroke-width="4"/><path d="M330 300c0-58 26-92 68-92 44 0 70 34 64 96l-6 52c-6 36-32 62-60 62-32 0-58-28-64-64z" fill="#f6dccd" stroke-width="3.5"/><path d="M326 306c-8-42 2-86 28-106 26-18 66-14 88 12 20 26 20 62 10 96-10-8-18-24-20-40-14 18-36 30-58 30 4-12 4-22 2-30-12 20-28 36-50 38z" fill="url(#candyHair)" stroke-width="4"/>
+    <path d="M352 340q16-12 32 0m24 0q16-12 32 0" fill="none" stroke="#202844" stroke-width="4"/><ellipse cx="369" cy="350" rx="5" ry="8" fill="#8a4b6c" stroke="none"/><ellipse cx="427" cy="350" rx="5" ry="8" fill="#8a4b6c" stroke="none"/><circle cx="367" cy="347" r="1.8" fill="#f4f0e8" stroke="none"/><circle cx="425" cy="347" r="1.8" fill="#f4f0e8" stroke="none"/><path d="M394 362l-2 14 5 1m-9 15q8 4 15-1" fill="none" stroke="#b57a86" stroke-width="2"/><path d="M344 384q10 5 18 0m74 0q10 5 18 0" fill="none" stroke="#eba3b6" stroke-width="3" opacity=".7"/>
+    <path d="M300 452c18-32 50-50 94-50s76 18 94 50l20 88H280z" fill="#ffd9e6" stroke-width="4"/><path d="M330 470q64 26 128 0" fill="none" stroke-width="3"/><path d="M368 480h56v40h-56z" fill="#caa6b9" stroke-width="3"/><path d="M368 496h56" stroke-width="3"/><path d="M362 470c0-18 12-30 30-30s30 12 30 30v10h-60z" fill="#515979" stroke-width="3"/><path d="M352 480h80" stroke-width="4"/><path d="M378 448q14-8 28 0" fill="none" stroke="#f4f0e8" stroke-width="3" opacity=".8"/>
+  </g>
+  <path d="M240 540h330v90H240z" fill="url(#candyBed)" stroke="#202844" stroke-width="4"/><path d="M240 540h330v18H240z" fill="#caa6b9" stroke="#202844" stroke-width="3"/>
+  <g fill="#bb574b" opacity=".8"><path d="M560 150l6 14 15 2-11 10 3 15-13-8-13 8 3-15-11-10 15-2z"/><circle cx="620" cy="230" r="5"/><path d="M600 300c-6-10 4-18 12-10 8-8 18 0 12 10l-12 12z" fill="#d98cb4"/></g>
+  <path d="M64 620h46M87 597v46M872 610h44M894 588v44" stroke="#bb574b" stroke-width="1.5" opacity=".85"/><circle cx="88" cy="96" r="4" fill="#bb574b"/><path d="M88 108v30" stroke="#bb574b"/>
 </svg>
