@@ -10,16 +10,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=M+PLUS+Rounded+1c:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #fff8f5;
-      --bg-soft: #fff0eb;
+      --bg: #fff9f5;
+      --bg-card: #ffffff;
       --pink: #ff8fab;
-      --pink-light: #ffb3c6;
-      --pink-soft: #ffc2d1;
-      --lavender: #c8b6ff;
-      --cream: #fff3e6;
-      --text: #5c4a4a;
-      --text-soft: #8a7070;
-      --accent: #ff6b9d;
+      --pink-deep: #ff6b9d;
+      --pink-soft: #ffd0dc;
+      --green: #7ec8a3;
+      --green-soft: #c8e6d0;
+      --cream: #fff3e0;
+      --sky: #a8d8ff;
+      --text: #5a4545;
+      --text-soft: #8a7373;
+      --line: #f0d4d8;
     }
 
     * {
@@ -41,258 +43,232 @@
       position: relative;
     }
 
-    /* soft decorative background blobs */
-    .bg-blob {
+    /* soft sky + ground atmosphere */
+    .sky {
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(180deg, #e8f4ff 0%, var(--bg) 55%, #fff0e8 100%);
+      z-index: 0;
+    }
+
+    /* decorative circles (soft blobs like illustration style) */
+    .blob {
       position: fixed;
       border-radius: 50%;
-      filter: blur(60px);
-      opacity: 0.45;
+      filter: blur(50px);
+      opacity: 0.5;
       z-index: 0;
       pointer-events: none;
     }
     .blob-1 {
-      width: 340px;
-      height: 340px;
+      width: 320px; height: 320px;
       background: var(--pink-soft);
-      top: -80px;
-      left: -100px;
-      animation: float 12s ease-in-out infinite;
+      top: -100px; left: -80px;
+      animation: drift 14s ease-in-out infinite;
     }
     .blob-2 {
-      width: 280px;
-      height: 280px;
-      background: var(--lavender);
-      bottom: -60px;
-      right: -80px;
-      animation: float 15s ease-in-out infinite reverse;
+      width: 260px; height: 260px;
+      background: var(--green-soft);
+      bottom: -80px; right: -60px;
+      animation: drift 18s ease-in-out infinite reverse;
     }
     .blob-3 {
-      width: 180px;
-      height: 180px;
-      background: #ffd6e0;
-      top: 40%;
-      left: 10%;
-      animation: float 10s ease-in-out infinite 2s;
+      width: 160px; height: 160px;
+      background: #ffe8b0;
+      top: 30%; right: 8%;
+      animation: drift 11s ease-in-out infinite 1s;
     }
 
-    @keyframes float {
+    @keyframes drift {
       0%, 100% { transform: translate(0, 0); }
-      50% { transform: translate(20px, -18px); }
+      50% { transform: translate(18px, -14px); }
     }
 
-    /* sparkles */
-    .sparkle {
+    /* tiny decorative dots */
+    .dot {
       position: fixed;
-      width: 8px;
-      height: 8px;
+      width: 6px; height: 6px;
       background: var(--pink);
       border-radius: 50%;
-      opacity: 0.6;
+      opacity: 0.55;
       z-index: 0;
-      animation: twinkle 3s ease-in-out infinite;
+      animation: twinkle 2.8s ease-in-out infinite;
     }
-    .sparkle:nth-child(1) { top: 18%; left: 22%; animation-delay: 0s; }
-    .sparkle:nth-child(2) { top: 28%; right: 18%; animation-delay: 0.8s; width: 6px; height: 6px; }
-    .sparkle:nth-child(3) { bottom: 22%; left: 15%; animation-delay: 1.4s; width: 5px; height: 5px; }
-    .sparkle:nth-child(4) { bottom: 30%; right: 25%; animation-delay: 2s; }
+    .dot:nth-child(1) { top: 16%; left: 18%; }
+    .dot:nth-child(2) { top: 24%; right: 16%; animation-delay: 0.7s; width: 5px; height: 5px; }
+    .dot:nth-child(3) { bottom: 20%; left: 12%; animation-delay: 1.3s; }
+    .dot:nth-child(4) { bottom: 28%; right: 20%; animation-delay: 1.9s; width: 4px; height: 4px; }
 
     @keyframes twinkle {
       0%, 100% { opacity: 0.3; transform: scale(1); }
-      50% { opacity: 0.9; transform: scale(1.4); }
+      50% { opacity: 0.85; transform: scale(1.35); }
     }
 
-    .container {
+    .wrap {
       position: relative;
       z-index: 1;
+      width: 100%;
+      max-width: 420px;
+      padding: 1.5rem;
       text-align: center;
-      padding: 2rem;
-      max-width: 520px;
     }
 
-    /* cute badge */
+    /* character-inspired badge */
     .badge {
       display: inline-flex;
       align-items: center;
-      gap: 0.4rem;
+      gap: 0.35rem;
       background: white;
-      border: 2px solid var(--pink-light);
+      border: 2px solid var(--pink-soft);
       border-radius: 999px;
-      padding: 0.35rem 1rem;
-      font-size: 0.85rem;
-      color: var(--accent);
+      padding: 0.3rem 0.95rem;
+      font-size: 0.82rem;
+      color: var(--pink-deep);
       font-weight: 500;
-      margin-bottom: 1.8rem;
-      box-shadow: 0 4px 14px rgba(255, 139, 171, 0.18);
+      margin-bottom: 1.6rem;
+      box-shadow: 0 4px 16px rgba(255, 139, 171, 0.15);
     }
-
-    .badge::before {
-      content: "♡";
-      font-size: 0.9rem;
+    .badge span {
+      font-size: 0.95rem;
     }
 
     h1 {
-      font-size: clamp(2.4rem, 8vw, 3.4rem);
+      font-size: clamp(2.2rem, 9vw, 3rem);
       font-weight: 700;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.03em;
+      line-height: 1.15;
+      margin-bottom: 0.35rem;
       color: var(--text);
-      margin-bottom: 0.6rem;
-      line-height: 1.2;
+    }
+    h1 .accent {
+      color: var(--pink-deep);
     }
 
-    h1 span {
-      background: linear-gradient(120deg, var(--accent), var(--lavender));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .subtitle {
-      font-size: 1.15rem;
+    .kana {
+      font-size: 1.05rem;
       color: var(--text-soft);
-      margin-bottom: 2.2rem;
+      letter-spacing: 0.12em;
+      margin-bottom: 1.8rem;
       font-weight: 500;
-      letter-spacing: 0.06em;
     }
 
-    /* decorative card */
+    /* main card - rounded like chibi silhouette */
     .card {
-      background: white;
-      border-radius: 24px;
-      padding: 2rem 1.8rem;
-      box-shadow: 0 12px 40px rgba(255, 139, 171, 0.12);
-      border: 1.5px solid #ffe0e8;
+      background: var(--bg-card);
+      border-radius: 28px;
+      padding: 2rem 1.6rem 1.8rem;
+      border: 2px solid var(--line);
+      box-shadow: 0 14px 40px rgba(255, 139, 171, 0.12);
       position: relative;
     }
 
+    /* little top accent like a collar / ribbon */
     .card::before {
       content: "";
       position: absolute;
-      top: -10px;
+      top: -9px;
       left: 50%;
       transform: translateX(-50%);
-      width: 60px;
-      height: 6px;
-      background: linear-gradient(90deg, var(--pink-light), var(--lavender));
+      width: 56px;
+      height: 7px;
+      background: linear-gradient(90deg, var(--pink), var(--green));
       border-radius: 999px;
     }
 
-    .message {
-      font-size: 1.05rem;
-      line-height: 1.75;
-      color: var(--text);
-      margin-bottom: 1.6rem;
-    }
-
-    .message .jp {
-      display: block;
-      font-size: 1.15rem;
-      margin-bottom: 0.35rem;
+    .msg-jp {
+      font-size: 1.2rem;
       font-weight: 500;
+      margin-bottom: 0.3rem;
+      color: var(--text);
     }
 
-    .message .en {
-      font-size: 0.92rem;
+    .msg-en {
+      font-size: 0.9rem;
       color: var(--text-soft);
-      letter-spacing: 0.03em;
+      letter-spacing: 0.02em;
+      margin-bottom: 1.5rem;
     }
 
-    /* status pill */
     .status {
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
-      background: var(--bg-soft);
+      gap: 0.45rem;
+      background: #fff0f3;
       border-radius: 999px;
-      padding: 0.45rem 1.1rem;
-      font-size: 0.9rem;
-      color: var(--accent);
+      padding: 0.4rem 1.05rem;
+      font-size: 0.88rem;
+      color: var(--pink-deep);
       font-weight: 500;
     }
 
     .status-dot {
       width: 8px;
       height: 8px;
-      background: var(--accent);
+      background: var(--pink-deep);
       border-radius: 50%;
-      animation: pulse 1.6s ease-in-out infinite;
+      animation: pulse 1.5s ease-in-out infinite;
     }
 
     @keyframes pulse {
       0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.45; transform: scale(0.85); }
+      50% { opacity: 0.4; transform: scale(0.8); }
     }
 
-    /* footer */
+    .deco {
+      margin-top: 1.3rem;
+      font-size: 1rem;
+      letter-spacing: 0.35rem;
+      opacity: 0.65;
+      color: var(--pink);
+    }
+
     footer {
       position: relative;
       z-index: 1;
-      margin-top: 2.5rem;
-      font-size: 0.8rem;
+      margin-top: 2.2rem;
+      font-size: 0.78rem;
       color: var(--text-soft);
       letter-spacing: 0.04em;
     }
 
-    footer a {
-      color: var(--pink);
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    /* small decorative hearts */
-    .hearts {
-      margin-top: 1.4rem;
-      font-size: 1.1rem;
-      letter-spacing: 0.4rem;
-      opacity: 0.7;
-    }
-
-    @media (max-width: 480px) {
-      .container {
-        padding: 1.5rem 1.2rem;
-      }
-      .card {
-        padding: 1.6rem 1.3rem;
-      }
+    @media (max-width: 420px) {
+      .wrap { padding: 1.2rem; }
+      .card { padding: 1.6rem 1.3rem 1.5rem; border-radius: 24px; }
     }
   </style>
 </head>
 <body>
-  <div class="bg-blob blob-1"></div>
-  <div class="bg-blob blob-2"></div>
-  <div class="bg-blob blob-3"></div>
+  <div class="sky"></div>
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
 
-  <div class="sparkle"></div>
-  <div class="sparkle"></div>
-  <div class="sparkle"></div>
-  <div class="sparkle"></div>
+  <div class="dot"></div>
+  <div class="dot"></div>
+  <div class="dot"></div>
+  <div class="dot"></div>
 
-  <main class="container">
-    <div class="badge">Coming Soon</div>
+  <main class="wrap">
+    <div class="badge">
+      <span>♡</span> Coming Soon
+    </div>
 
-    <h1><span>Kanojo</span>KanoYui</h1>
-    <p class="subtitle">かのじょかのゆい</p>
+    <h1><span class="accent">Kanojo</span>KanoYui</h1>
+    <p class="kana">かのじょかのゆい</p>
 
     <div class="card">
-      <div class="message">
-        <span class="jp">ただいま準備中です ♡</span>
-        <span class="en">This page is under construction.</span>
-      </div>
+      <p class="msg-jp">ただいま準備中です ♡</p>
+      <p class="msg-en">This little page is still growing...</p>
 
       <div class="status">
         <span class="status-dot"></span>
-        <span>準備中 / Working on it</span>
+        <span>準備中</span>
       </div>
 
-      <div class="hearts">♡ ✦ ♡</div>
+      <div class="deco">✿ ♡ ✿</div>
     </div>
   </main>
 
-  <footer>
-    © 2026 KanojoKanoYui
-  </footer>
+  <footer>© 2026 KanojoKanoYui</footer>
 </body>
 </html>
