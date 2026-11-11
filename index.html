@@ -4,24 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KanojoKanoYui</title>
-  <meta name="description" content="Coming soon...">
+  <meta name="description" content="Coming soon... ♡">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=M+PLUS+Rounded+1c:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #fff8f2;
-      --card: #ffffff;
+      --bg: #fff9f7;
       --pink: #ff8fab;
-      --pink-deep: #f06292;
-      --pink-soft: #ffcdd8;
-      --green: #7bc47f;
-      --green-soft: #c8e6c9;
-      --yellow: #ffd54f;
-      --sky: #b3e5fc;
-      --text: #5d4037;
-      --text-soft: #8d6e63;
-      --line: #f8bbd0;
+      --pink-deep: #ff6b9d;
+      --pink-soft: #ffc2d1;
+      --pink-pale: #ffe4ec;
+      --green: #7ec8a3;
+      --green-soft: #b8e0c8;
+      --lavender: #d4c1ff;
+      --cream: #fff5eb;
+      --text: #5a4545;
+      --text-soft: #8c7575;
+      --line: #3a3a3a;
+      --skin: #f8f0e8;
+      --hair: #f2f2f2;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -37,73 +39,59 @@
       justify-content: center;
       overflow-x: hidden;
       position: relative;
+      padding: 1.5rem 1rem 2rem;
     }
 
-    /* soft sky gradient like the illustration */
-    .atmosphere {
-      position: fixed;
-      inset: 0;
-      background: linear-gradient(
-        180deg,
-        #e3f2fd 0%,
-        #fce4ec 40%,
-        #fff8f2 70%,
-        #fff3e0 100%
-      );
-      z-index: 0;
-    }
-
-    /* soft floating blobs inspired by sunflower field light */
     .blob {
       position: fixed;
       border-radius: 50%;
-      filter: blur(55px);
-      opacity: 0.45;
+      filter: blur(70px);
+      opacity: 0.48;
       z-index: 0;
       pointer-events: none;
     }
-    .blob-pink {
-      width: 300px; height: 300px;
+    .blob-1 {
+      width: 360px; height: 360px;
       background: var(--pink-soft);
-      top: -90px; left: -70px;
-      animation: float 13s ease-in-out infinite;
+      top: -110px; left: -130px;
+      animation: drift 14s ease-in-out infinite;
     }
-    .blob-green {
-      width: 240px; height: 240px;
+    .blob-2 {
+      width: 280px; height: 280px;
       background: var(--green-soft);
-      bottom: -70px; right: -50px;
-      animation: float 16s ease-in-out infinite reverse;
+      bottom: -90px; right: -90px;
+      animation: drift 17s ease-in-out infinite reverse;
     }
-    .blob-yellow {
-      width: 150px; height: 150px;
-      background: #ffe082;
-      top: 35%; right: 6%;
-      animation: float 11s ease-in-out infinite 1.5s;
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translate(0, 0); }
-      50% { transform: translate(16px, -12px); }
+    .blob-3 {
+      width: 180px; height: 180px;
+      background: var(--lavender);
+      top: 42%; left: 6%;
+      animation: drift 11s ease-in-out infinite 1.2s;
     }
 
-    /* tiny sparkles */
+    @keyframes drift {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(16px, -20px) scale(1.04); }
+    }
+
     .spark {
       position: fixed;
-      width: 6px; height: 6px;
+      width: 7px; height: 7px;
       background: var(--pink);
       border-radius: 50%;
-      opacity: 0.5;
+      opacity: 0.55;
       z-index: 0;
-      animation: twinkle 2.6s ease-in-out infinite;
+      animation: twinkle 2.8s ease-in-out infinite;
     }
-    .spark:nth-child(1) { top: 14%; left: 16%; }
-    .spark:nth-child(2) { top: 22%; right: 14%; animation-delay: 0.6s; width: 5px; height: 5px; }
-    .spark:nth-child(3) { bottom: 18%; left: 11%; animation-delay: 1.2s; }
-    .spark:nth-child(4) { bottom: 26%; right: 18%; animation-delay: 1.8s; width: 4px; height: 4px; }
+    .spark:nth-child(1) { top: 13%; left: 17%; }
+    .spark:nth-child(2) { top: 21%; right: 13%; animation-delay: 0.6s; width: 5px; height: 5px; }
+    .spark:nth-child(3) { bottom: 17%; left: 11%; animation-delay: 1.2s; width: 6px; height: 6px; }
+    .spark:nth-child(4) { bottom: 25%; right: 19%; animation-delay: 1.8s; }
+    .spark:nth-child(5) { top: 36%; right: 7%; animation-delay: 0.35s; width: 4px; height: 4px; }
 
     @keyframes twinkle {
       0%, 100% { opacity: 0.25; transform: scale(1); }
-      50% { opacity: 0.8; transform: scale(1.4); }
+      50% { opacity: 0.85; transform: scale(1.45); }
     }
 
     .page {
@@ -111,170 +99,326 @@
       z-index: 1;
       width: 100%;
       max-width: 400px;
-      padding: 1.5rem;
       text-align: center;
     }
 
-    /* character area - centered like the composition */
-    .character-area {
-      margin-bottom: 1.6rem;
+    /* Character - closer to the provided illustration */
+    .stage {
+      width: 200px;
+      height: 240px;
+      margin: 0 auto 1.4rem;
       position: relative;
     }
 
-    .character-frame {
-      width: 180px;
-      height: 180px;
-      margin: 0 auto;
-      border-radius: 50%;
-      background: linear-gradient(145deg, #fff 0%, #fff0f5 100%);
-      border: 3px solid var(--pink-soft);
-      box-shadow: 0 12px 32px rgba(240, 98, 146, 0.15);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    /* simple CSS chibi face as placeholder until real art is added */
     .chibi {
-      width: 120px;
-      height: 120px;
+      width: 160px;
+      height: 230px;
+      margin: 0 auto;
       position: relative;
     }
 
-    .chibi-hair {
-      width: 110px;
-      height: 70px;
-      background: #f5f5f5;
-      border-radius: 55px 55px 20px 20px;
+    /* Hair */
+    .hair-back {
       position: absolute;
-      top: 0;
-      left: 5px;
-      border: 2.5px solid #e0e0e0;
+      top: 2px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 122px;
+      height: 92px;
+      background: var(--hair);
+      border: 2.5px solid var(--line);
+      border-radius: 60% 60% 42% 42%;
+      z-index: 1;
     }
 
-    .chibi-face {
-      width: 78px;
-      height: 78px;
-      background: #fff8f0;
-      border-radius: 50%;
-      position: absolute;
-      top: 28px;
-      left: 21px;
-      border: 2.5px solid #e8d5c8;
-    }
-
-    .chibi-glasses {
+    .hair-side-l, .hair-side-r {
       position: absolute;
       top: 48px;
-      left: 28px;
-      width: 64px;
-      height: 22px;
-      border: 2.5px solid #f48fb1;
-      border-radius: 12px;
-      background: transparent;
+      width: 34px;
+      height: 52px;
+      background: var(--hair);
+      border: 2.5px solid var(--line);
+      z-index: 1;
+    }
+    .hair-side-l {
+      left: 12px;
+      border-radius: 0 0 40% 70%;
+      border-right: none;
+    }
+    .hair-side-r {
+      right: 12px;
+      border-radius: 0 0 70% 40%;
+      border-left: none;
     }
 
-    .chibi-eye {
+    /* Head */
+    .head {
       position: absolute;
-      width: 12px;
-      height: 14px;
-      background: #42a5f5;
+      top: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 104px;
+      height: 96px;
+      background: var(--skin);
+      border: 2.5px solid var(--line);
+      border-radius: 50% 50% 46% 46%;
+      z-index: 3;
+    }
+
+    /* Bangs */
+    .bangs {
+      position: absolute;
+      top: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 96px;
+      height: 34px;
+      background: var(--hair);
+      border-radius: 0 0 50% 50%;
+      z-index: 4;
+      border-bottom: 2px solid var(--line);
+    }
+
+    /* Glasses */
+    .glasses {
+      position: absolute;
+      top: 42px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 76px;
+      height: 26px;
+      z-index: 5;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .lens {
+      width: 30px;
+      height: 26px;
+      border: 3px solid #e88aa8;
       border-radius: 50%;
-      top: 52px;
+      background: rgba(255,255,255,0.3);
+      position: relative;
     }
-    .chibi-eye.left { left: 38px; }
-    .chibi-eye.right { right: 38px; left: auto; }
-
-    .chibi-mouth {
+    .lens::after {
+      content: "";
       position: absolute;
+      top: 5px;
+      left: 6px;
+      width: 7px;
+      height: 7px;
+      background: #4fc3f7;
+      border-radius: 50%;
+      box-shadow: 11px 2px 0 #4fc3f7;
+    }
+    .bridge {
       width: 8px;
-      height: 4px;
-      border-bottom: 2px solid #e57373;
-      border-radius: 0 0 8px 8px;
-      top: 72px;
-      left: 56px;
+      height: 3px;
+      background: #e88aa8;
     }
 
+    /* Body / Dress */
+    .body {
+      position: absolute;
+      top: 108px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 88px;
+      height: 72px;
+      background: var(--pink);
+      border: 2.5px solid var(--line);
+      border-radius: 14px 14px 20px 20px;
+      z-index: 2;
+    }
+    .collar {
+      position: absolute;
+      top: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 44px;
+      height: 13px;
+      background: #fff;
+      border: 2px solid var(--line);
+      border-radius: 18px;
+      z-index: 3;
+    }
+
+    /* Bag */
+    .bag {
+      position: absolute;
+      top: 118px;
+      left: 16px;
+      width: 34px;
+      height: 26px;
+      background: var(--green);
+      border: 2px solid var(--line);
+      border-radius: 9px;
+      z-index: 4;
+      transform: rotate(-14deg);
+    }
+    .bag::before {
+      content: "";
+      position: absolute;
+      top: -12px;
+      left: 9px;
+      width: 14px;
+      height: 14px;
+      border: 2.5px solid var(--line);
+      border-bottom: none;
+      border-radius: 50% 50% 0 0;
+    }
+
+    /* Bouquet */
+    .bouquet {
+      position: absolute;
+      top: 112px;
+      right: 10px;
+      width: 46px;
+      height: 50px;
+      z-index: 5;
+    }
+    .flower {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background: #ff8fab;
+      border: 1.5px solid var(--line);
+      border-radius: 50%;
+    }
+    .flower:nth-child(1) { top: 0; left: 14px; }
+    .flower:nth-child(2) { top: 7px; left: 0; background: #ffb3c6; }
+    .flower:nth-child(3) { top: 5px; right: 0; background: #ff9eb5; }
+    .flower:nth-child(4) { top: 16px; left: 12px; background: #ffc2d1; }
+    .stem {
+      position: absolute;
+      bottom: 2px;
+      left: 20px;
+      width: 3px;
+      height: 26px;
+      background: var(--green);
+      border-radius: 2px;
+    }
+
+    /* Legs & shoes */
+    .legs {
+      position: absolute;
+      top: 176px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 56px;
+      height: 26px;
+      display: flex;
+      justify-content: space-between;
+      z-index: 1;
+    }
+    .leg {
+      width: 20px;
+      height: 26px;
+      background: var(--skin);
+      border: 2px solid var(--line);
+      border-radius: 7px;
+    }
+
+    .shoes {
+      position: absolute;
+      top: 198px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 72px;
+      height: 18px;
+      display: flex;
+      justify-content: space-between;
+      z-index: 2;
+    }
+    .shoe {
+      width: 32px;
+      height: 16px;
+      background: #fff;
+      border: 2px solid var(--line);
+      border-radius: 9px 9px 5px 5px;
+    }
+
+    /* Text */
     .badge {
       display: inline-flex;
       align-items: center;
-      gap: 0.35rem;
-      background: white;
+      gap: 0.3rem;
+      background: #fff;
       border: 2px solid var(--pink-soft);
       border-radius: 999px;
       padding: 0.28rem 0.9rem;
       font-size: 0.8rem;
       color: var(--pink-deep);
       font-weight: 500;
-      margin-bottom: 1.2rem;
-      box-shadow: 0 4px 14px rgba(240, 98, 146, 0.12);
+      margin-bottom: 0.9rem;
+      box-shadow: 0 4px 12px rgba(255, 139, 171, 0.14);
     }
 
     h1 {
-      font-size: clamp(2rem, 8vw, 2.7rem);
+      font-size: clamp(1.85rem, 7vw, 2.5rem);
       font-weight: 700;
       letter-spacing: 0.02em;
       line-height: 1.2;
-      margin-bottom: 0.25rem;
+      margin-bottom: 0.2rem;
     }
-    h1 .pink { color: var(--pink-deep); }
+    h1 .accent {
+      background: linear-gradient(120deg, var(--pink-deep), #c9a0ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
 
     .kana {
-      font-size: 0.98rem;
+      font-size: 0.92rem;
       color: var(--text-soft);
-      letter-spacing: 0.14em;
-      margin-bottom: 1.5rem;
+      letter-spacing: 0.12em;
+      margin-bottom: 1.35rem;
       font-weight: 500;
     }
 
     .card {
-      background: var(--card);
-      border-radius: 26px;
-      padding: 1.7rem 1.4rem 1.5rem;
-      border: 2px solid var(--line);
-      box-shadow: 0 12px 36px rgba(240, 98, 146, 0.1);
+      background: #fff;
+      border-radius: 22px;
+      padding: 1.4rem 1.3rem 1.25rem;
+      box-shadow: 0 10px 30px rgba(255, 139, 171, 0.12);
+      border: 1.5px solid var(--pink-pale);
       position: relative;
     }
-
     .card::before {
       content: "";
       position: absolute;
-      top: -8px;
+      top: -7px;
       left: 50%;
       transform: translateX(-50%);
-      width: 52px;
-      height: 6px;
+      width: 48px;
+      height: 5px;
       background: linear-gradient(90deg, var(--pink), var(--green));
       border-radius: 999px;
     }
 
     .msg-jp {
-      font-size: 1.15rem;
+      font-size: 1.08rem;
       font-weight: 500;
-      margin-bottom: 0.25rem;
+      margin-bottom: 0.2rem;
     }
-
     .msg-en {
-      font-size: 0.88rem;
+      font-size: 0.86rem;
       color: var(--text-soft);
-      margin-bottom: 1.3rem;
+      margin-bottom: 1.15rem;
     }
 
     .status {
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
-      background: #fff0f3;
+      background: var(--pink-pale);
       border-radius: 999px;
-      padding: 0.38rem 1rem;
-      font-size: 0.86rem;
+      padding: 0.38rem 0.95rem;
+      font-size: 0.84rem;
       color: var(--pink-deep);
       font-weight: 500;
     }
-
-    .status-dot {
+    .dot {
       width: 7px;
       height: 7px;
       background: var(--pink-deep);
@@ -284,13 +428,13 @@
 
     @keyframes pulse {
       0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.35; transform: scale(0.75); }
+      50% { opacity: 0.4; transform: scale(0.8); }
     }
 
-    .flowers {
-      margin-top: 1.1rem;
-      font-size: 1.05rem;
-      letter-spacing: 0.3rem;
+    .hearts {
+      margin-top: 0.95rem;
+      font-size: 0.95rem;
+      letter-spacing: 0.35rem;
       opacity: 0.7;
       color: var(--pink);
     }
@@ -298,60 +442,78 @@
     footer {
       position: relative;
       z-index: 1;
-      margin-top: 2rem;
+      margin-top: 1.8rem;
       font-size: 0.76rem;
       color: var(--text-soft);
       letter-spacing: 0.04em;
     }
 
     @media (max-width: 400px) {
-      .page { padding: 1.1rem; }
-      .character-frame { width: 150px; height: 150px; }
-      .card { padding: 1.4rem 1.2rem; border-radius: 22px; }
+      .stage { width: 170px; height: 210px; }
+      .chibi { transform: scale(0.9); transform-origin: top center; }
     }
   </style>
 </head>
 <body>
-  <div class="atmosphere"></div>
-  <div class="blob blob-pink"></div>
-  <div class="blob blob-green"></div>
-  <div class="blob blob-yellow"></div>
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
 
+  <div class="spark"></div>
   <div class="spark"></div>
   <div class="spark"></div>
   <div class="spark"></div>
   <div class="spark"></div>
 
   <main class="page">
-    <div class="badge">♡ Coming Soon</div>
-
-    <!-- centered character area inspired by the composition -->
-    <div class="character-area">
-      <div class="character-frame">
-        <div class="chibi">
-          <div class="chibi-hair"></div>
-          <div class="chibi-face"></div>
-          <div class="chibi-glasses"></div>
-          <div class="chibi-eye left"></div>
-          <div class="chibi-eye right"></div>
-          <div class="chibi-mouth"></div>
+    <div class="stage">
+      <div class="chibi">
+        <div class="hair-back"></div>
+        <div class="hair-side-l"></div>
+        <div class="hair-side-r"></div>
+        <div class="head">
+          <div class="bangs"></div>
+          <div class="glasses">
+            <div class="lens"></div>
+            <div class="bridge"></div>
+            <div class="lens"></div>
+          </div>
+        </div>
+        <div class="body"><div class="collar"></div></div>
+        <div class="bag"></div>
+        <div class="bouquet">
+          <div class="stem"></div>
+          <div class="flower"></div>
+          <div class="flower"></div>
+          <div class="flower"></div>
+          <div class="flower"></div>
+        </div>
+        <div class="legs">
+          <div class="leg"></div>
+          <div class="leg"></div>
+        </div>
+        <div class="shoes">
+          <div class="shoe"></div>
+          <div class="shoe"></div>
         </div>
       </div>
     </div>
 
-    <h1><span class="pink">Kanojo</span>KanoYui</h1>
+    <div class="badge">Coming Soon ♡</div>
+
+    <h1><span class="accent">Kanojo</span>KanoYui</h1>
     <p class="kana">かのじょかのゆい</p>
 
     <div class="card">
       <p class="msg-jp">ただいま準備中です ♡</p>
-      <p class="msg-en">This little page is still growing...</p>
+      <p class="msg-en">This page is under construction.</p>
 
       <div class="status">
-        <span class="status-dot"></span>
-        <span>準備中</span>
+        <span class="dot"></span>
+        <span>準備中 / Working on it</span>
       </div>
 
-      <div class="flowers">✿ ♡ ✿</div>
+      <div class="hearts">♡ ✦ ♡</div>
     </div>
   </main>
 
