@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KanojoKanoYui</title>
+  <meta name="description" content="Coming soon...">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=M+PLUS+Rounded+1c:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fff8f5;
+      --bg-soft: #fff0eb;
+      --pink: #ff8fab;
+      --pink-light: #ffb3c6;
+      --pink-soft: #ffc2d1;
+      --lavender: #c8b6ff;
+      --cream: #fff3e6;
+      --text: #5c4a4a;
+      --text-soft: #8a7070;
+      --accent: #ff6b9d;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: 'Zen Maru Gothic', 'M PLUS Rounded 1c', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* soft decorative background blobs */
+    .bg-blob {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(60px);
+      opacity: 0.45;
+      z-index: 0;
+      pointer-events: none;
+    }
+    .blob-1 {
+      width: 340px;
+      height: 340px;
+      background: var(--pink-soft);
+      top: -80px;
+      left: -100px;
+      animation: float 12s ease-in-out infinite;
+    }
+    .blob-2 {
+      width: 280px;
+      height: 280px;
+      background: var(--lavender);
+      bottom: -60px;
+      right: -80px;
+      animation: float 15s ease-in-out infinite reverse;
+    }
+    .blob-3 {
+      width: 180px;
+      height: 180px;
+      background: #ffd6e0;
+      top: 40%;
+      left: 10%;
+      animation: float 10s ease-in-out infinite 2s;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translate(0, 0); }
+      50% { transform: translate(20px, -18px); }
+    }
+
+    /* sparkles */
+    .sparkle {
+      position: fixed;
+      width: 8px;
+      height: 8px;
+      background: var(--pink);
+      border-radius: 50%;
+      opacity: 0.6;
+      z-index: 0;
+      animation: twinkle 3s ease-in-out infinite;
+    }
+    .sparkle:nth-child(1) { top: 18%; left: 22%; animation-delay: 0s; }
+    .sparkle:nth-child(2) { top: 28%; right: 18%; animation-delay: 0.8s; width: 6px; height: 6px; }
+    .sparkle:nth-child(3) { bottom: 22%; left: 15%; animation-delay: 1.4s; width: 5px; height: 5px; }
+    .sparkle:nth-child(4) { bottom: 30%; right: 25%; animation-delay: 2s; }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.3; transform: scale(1); }
+      50% { opacity: 0.9; transform: scale(1.4); }
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 2rem;
+      max-width: 520px;
+    }
+
+    /* cute badge */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: white;
+      border: 2px solid var(--pink-light);
+      border-radius: 999px;
+      padding: 0.35rem 1rem;
+      font-size: 0.85rem;
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 1.8rem;
+      box-shadow: 0 4px 14px rgba(255, 139, 171, 0.18);
+    }
+
+    .badge::before {
+      content: "♡";
+      font-size: 0.9rem;
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 8vw, 3.4rem);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--text);
+      margin-bottom: 0.6rem;
+      line-height: 1.2;
+    }
+
+    h1 span {
+      background: linear-gradient(120deg, var(--accent), var(--lavender));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .subtitle {
+      font-size: 1.15rem;
+      color: var(--text-soft);
+      margin-bottom: 2.2rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+    }
+
+    /* decorative card */
+    .card {
+      background: white;
+      border-radius: 24px;
+      padding: 2rem 1.8rem;
+      box-shadow: 0 12px 40px rgba(255, 139, 171, 0.12);
+      border: 1.5px solid #ffe0e8;
+      position: relative;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 6px;
+      background: linear-gradient(90deg, var(--pink-light), var(--lavender));
+      border-radius: 999px;
+    }
+
+    .message {
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: var(--text);
+      margin-bottom: 1.6rem;
+    }
+
+    .message .jp {
+      display: block;
+      font-size: 1.15rem;
+      margin-bottom: 0.35rem;
+      font-weight: 500;
+    }
+
+    .message .en {
+      font-size: 0.92rem;
+      color: var(--text-soft);
+      letter-spacing: 0.03em;
+    }
+
+    /* status pill */
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--bg-soft);
+      border-radius: 999px;
+      padding: 0.45rem 1.1rem;
+      font-size: 0.9rem;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--accent);
+      border-radius: 50%;
+      animation: pulse 1.6s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.45; transform: scale(0.85); }
+    }
+
+    /* footer */
+    footer {
+      position: relative;
+      z-index: 1;
+      margin-top: 2.5rem;
+      font-size: 0.8rem;
+      color: var(--text-soft);
+      letter-spacing: 0.04em;
+    }
+
+    footer a {
+      color: var(--pink);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* small decorative hearts */
+    .hearts {
+      margin-top: 1.4rem;
+      font-size: 1.1rem;
+      letter-spacing: 0.4rem;
+      opacity: 0.7;
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 1.5rem 1.2rem;
+      }
+      .card {
+        padding: 1.6rem 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-blob blob-1"></div>
+  <div class="bg-blob blob-2"></div>
+  <div class="bg-blob blob-3"></div>
+
+  <div class="sparkle"></div>
+  <div class="sparkle"></div>
+  <div class="sparkle"></div>
+  <div class="sparkle"></div>
+
+  <main class="container">
+    <div class="badge">Coming Soon</div>
+
+    <h1><span>Kanojo</span>KanoYui</h1>
+    <p class="subtitle">かのじょかのゆい</p>
+
+    <div class="card">
+      <div class="message">
+        <span class="jp">ただいま準備中です ♡</span>
+        <span class="en">This page is under construction.</span>
+      </div>
+
+      <div class="status">
+        <span class="status-dot"></span>
+        <span>準備中 / Working on it</span>
+      </div>
+
+      <div class="hearts">♡ ✦ ♡</div>
+    </div>
+  </main>
+
+  <footer>
+    © 2026 KanojoKanoYui
+  </footer>
+</body>
+</html>
